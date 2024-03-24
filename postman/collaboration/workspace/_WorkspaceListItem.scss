@@ -1,0 +1,48 @@
+.workspace-list-item-container {
+  @include unselectable;
+  @include clickable;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-s) var(--spacing-m);
+
+  &--enable-hover {
+    &:hover {
+      background-color: var(--highlight-background-color-primary);
+      border-radius: var(--border-radius-default);
+    }
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  &--selected {
+    background-color: var(--highlight-background-color-tertiary);
+    border-radius: var(--border-radius-default);
+  }
+
+  &__info {
+    max-width: 95%;
+
+    &__icon {
+      margin-left: var(--spacing-xs);
+      pointer-events: all;
+    }
+
+    &__name {
+      max-width: 200px;
+    }
+
+    &__visibility-icon {
+      margin-right: var(--spacing-s) !important;
+    }
+  }
+
+  &__disabled-info {
+    &__icon {
+      pointer-events: all;
+    }
+  }
+}

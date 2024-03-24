@@ -1,0 +1,494 @@
+.payment-methods {
+  padding-bottom: var(-spacing-xxl);
+
+  &__loader {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__list {
+    @include unstyled-list;
+    padding-inline-start: var(--spacing-zero);
+
+    &-row {
+      padding: var(--spacing-l) var(--spacing-zero);
+      border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:hover {
+        background: var(--background-color-secondary);
+
+        .payment-methods__default {
+          display: inline-flex;
+        }
+
+        .payment-methods__status {
+          display: none;
+        }
+
+        .payment-methods__remove {
+          display: inline-flex;
+        }
+
+        .payment-methods-primary {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__image {
+    display: inline-block !important;
+    border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+    border-radius: var(--border-radius-default);
+    box-sizing: border-box;
+    background-color: var(--background-color-primary);
+    margin-right: var(--spacing-l);
+    margin-left: var(--spacing-xs);
+
+    svg {
+      padding: var(--spacing-zero) var(--spacing-s);
+    }
+
+    &--visa {
+      @include icon('../assets/images/thumbnails/visa.svg', 46px, 37px);
+    }
+
+    &--mastercard {
+      @include icon('../assets/images/thumbnails/mastercard.svg', 46px, 37px);
+    }
+
+    &--amex {
+      @include icon('../assets/images/thumbnails/amex.svg', 46px, 37px);
+    }
+
+    &--jcb {
+      @include icon('../assets/images/thumbnails/jcb.svg', 46px, 37px);
+    }
+
+    &--unionPay {
+      @include icon('../assets/images/thumbnails/unionPay.svg', 46px, 37px);
+    }
+
+    &--alipay {
+      @include icon('../assets/images/thumbnails/alipay.svg', 46px, 37px);
+    }
+
+    &--discover {
+      @include icon('../assets/images/thumbnails/discover.svg', 46px, 37px);
+    }
+
+    &--defaultCard {
+      @include icon('../assets/images/thumbnails/defaultCard.svg', 46px, 37px);
+    }
+
+    &--defaultBank {
+      @include icon('../assets/images/thumbnails/bank.svg', 42px, 37px);
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  &__subheading {
+    overflow: auto;
+    padding: var(--spacing-m) var(--spacing-zero) var(--spacing-xl) var(--spacing-zero);
+
+    &-text {
+      display: inline-block;
+      color: var(--content-color-secondary);
+      padding: 6px var(--spacing-zero);
+      font-size: var(--text-size-l);
+    }
+  }
+
+  &__border {
+    color: var(--border-color-default);
+    margin: var(--spacing-zero);
+  }
+
+  &__add {
+    float: right;
+  }
+
+  &__details {
+    display: inline-block;
+    text-transform: capitalize;
+  }
+
+  &__description {
+    color: var(--content-color-secondary);
+    font-size: var(--text-size-m);
+  }
+
+  &__action {
+    padding: 2px 0px;
+    float: right;
+  }
+
+  &__remove {
+    margin-right: var(--spacing-s);
+    float: right;
+    display: none;
+  }
+
+  &__default {
+    margin-right: var(--spacing-s);
+    display: none;
+  }
+
+  &__status {
+    margin-right: var(--spacing-s);
+    display: inline-flex;
+    padding: var(--spacing-s);
+  }
+
+  &-primary {
+    margin-top: var(--spacing-xs);
+    margin-right: var(--spacing-s);
+    background: var(--background-color-info);
+    padding: 2px 12px;
+    font-weight: var(--text-weight-medium);
+    font-size: var(--text-size-m);
+    color: var(--content-color-info);
+    border-radius: 32px;
+    float: right;
+  }
+}
+
+.delete-payment-method {
+  &__info {
+    margin-top: var(--spacing-m);
+    display: flex;
+    color: var(--content-color-secondary);
+
+    &-text {
+      margin: var(--spacing-zero) var(--spacing-s);
+    }
+
+    i {
+      margin: 1px var(--spacing-zero);
+    }
+  }
+
+  &__action {
+    &-delete {
+      background-color: var(--base-color-error);
+      margin-left: var(--spacing-s);
+      height: var(--size-m);
+    }
+
+    &-cancel {
+      height: var(--size-m);
+    }
+  }
+}
+
+.add-payment-method {
+  max-width: 420px;
+
+  &__title {
+    margin-top: var(--spacing-m);
+  }
+
+  &__sub-title {
+    margin-top: var(--spacing-xl);
+  }
+
+  &__tabs {
+    margin-top: var(--spacing-xl);
+  }
+
+  &__tab-card {
+    // using important to override default margin for tab wrapper
+    div {
+      margin-left: 0 !important;
+    }
+  }
+
+  &__ach {
+    max-width: 490px;
+    margin-top: var(--spacing-l);
+
+    &__heading {
+      margin-top: var(--spacing-l);
+    }
+
+    &__description {
+      font-size: var(--text-size-l);
+      color: var(--content-color-secondary);
+      margin-top: var(--spacing-s);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    &__buttons {
+      margin-top: var(--spacing-l);
+    }
+  }
+
+  &__back-button {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-l);
+    font-size: var(--text-size-m);
+    cursor: pointer;
+
+    &-link {
+      margin: 0px 0px 0px var(--spacing-xs);
+    }
+  }
+
+  &__info {
+    margin-top: var(--spacing-m);
+    display: flex;
+    color: var(--content-color-secondary);
+
+    &-text {
+      margin: var(--spacing-zero) var(--spacing-s);
+    }
+
+    i {
+      margin: 1px var(--spacing-zero);
+    }
+  }
+
+  &__card {
+    margin: var(--spacing-l) var(--spacing-zero);
+
+    &-title {
+      margin: var(--spacing-zero);
+      font-size: var(--text-size-l);
+      line-height: var(--line-height-m);
+    }
+
+    &-details {
+      border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+      display: flex;
+      width: 100%;
+    }
+
+    &-expiry-element {
+      width: 50%;
+      display: inline-block;
+      border-right: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+      vertical-align: bottom;
+    }
+
+    &-cvc-element {
+      width: 50%;
+      display: inline-block;
+      vertical-align: bottom;
+    }
+  }
+
+  &__label {
+    &-title {
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+      font-weight: var(--text-weight-medium);
+
+      span {
+        color: var(--content-color-secondary);
+        font-size: var(--text-size-s);
+        font-weight: var(--text-weight-regular);
+      }
+    }
+
+    &-description {
+      margin-top: 0;
+      color: var(--content-color-secondary);
+      font-style: normal;
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+    }
+
+    &-input {
+      flex: 1;
+      padding: var(--spacing-s) var(--spacing-zero);
+    }
+  }
+
+  &__address {
+    &-title {
+      margin: var(--spacing-zero);
+      font-size: var(--text-size-l);
+      line-height: var(--line-height-m);
+    }
+
+    &-subtitle {
+      color: var(--content-color-secondary);
+      font-size: var(--text-size-m);
+      padding: var(--spacing-xs) var(--spacing-zero);
+    }
+
+    &-segment {
+      margin: var(--spacing-s) 0;
+    }
+
+    &-wrapper {
+      position: relative;
+      display: inline-block;
+      width: 50%;
+    }
+
+    &-line2 {
+      color: var(--content-color-secondary);
+      font-size: var(--text-size-s);
+      padding: var(--spacing-xs);
+    }
+  }
+
+  &--default {
+    display: inline-flex;
+    margin-right: var(--spacing-xs);
+  }
+
+  &--country-dropdown {
+    display: inline-block;
+    position: relative;
+    height: var(--controls-size-default);
+    border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+    border-radius: var(--border-radius-s);
+    background-color: var(--background-color-secondary);
+    width: 100%;
+
+    .pm-form-control {
+      width: 100%;
+      height: 100%;
+      border: 5px transparent;
+      background-color: var(--background-color-secondary);
+      font-size: var(--text-size-m);
+    }
+
+    select {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 0 var(--spacing-m) 0 var(--spacing-s);
+      -webkit-padding-end: var(--spacing-m);
+      -webkit-padding-start: var(--spacing-s);
+    }
+  }
+
+  &--region-dropdown {
+    display: inline-block;
+    position: relative;
+    height: var(--controls-size-default);
+    border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+    border-radius: var(--border-radius-s);
+    width: 90%;
+
+    .pm-form-control {
+      width: 100%;
+      height: 100%;
+      border: 5px transparent;
+      background-color: var(--background-color-secondary);
+      font-size: var(--text-size-m);
+    }
+
+    select {
+      cursor: pointer;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      padding: 0 var(--spacing-m) 0 var(--spacing-s);
+      -webkit-padding-end: var(--spacing-m);
+      -webkit-padding-start: var(--spacing-s);
+    }
+  }
+
+  &--country-dropdown:after,
+  &--region-dropdown:after {
+    content: '';
+    border: 5px solid transparent;
+    border-color: grey transparent transparent transparent;
+    position: absolute;
+    top: 45%;
+    right: 12px;
+    pointer-events: none;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    padding-bottom: var(--spacing-xl);
+  }
+
+  &__action {
+    &-confirm {
+      margin-right: var(--spacing-s);
+      height: var(--size-m);
+    }
+
+    &-delete {
+      background-color: var(--base-color-error);
+      margin-left: var(--spacing-s);
+      height: var(--size-m);
+    }
+
+    &-cancel {
+      height: var(--size-m);
+    }
+  }
+}
+
+.setup-payment-method {
+  &__loading-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+  }
+
+  &__buttons {
+    margin-top: var(--spacing-m);
+  }
+}
+
+.verify-payment-method {
+  width: 480px;
+
+  &__heading {
+    margin-top: var(--spacing-s);
+  }
+
+  &__description {
+    margin-top: var(--spacing-xl);
+
+    &__info {
+      margin-top: var(--spacing-xl);
+    }
+  }
+
+  &__banner {
+    &__statement {
+      margin-top: var(--spacing-m);
+      @include icon('../assets/images/thumbnails/bankStatementBanner.svg', 480px, 183px);
+      background-size: contain;
+    }
+  }
+
+  &__info-banner {
+    margin-top: var(--spacing-xl);
+  }
+
+  &__form {
+    margin-top: var(--spacing-xl);
+  }
+
+  &__buttons {
+    margin-top: var(--spacing-xl);
+  }
+}

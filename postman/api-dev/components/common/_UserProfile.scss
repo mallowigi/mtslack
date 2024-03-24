@@ -1,0 +1,24 @@
+.user-profile-wrapper {
+  display: flex;
+  flex: 1;
+  align-items: center;
+
+  .user-profile-pic-wrapper {
+    cursor: pointer;
+
+    .pm-user-avatar-icon {
+      height: var(--size-s);
+      width: var(--size-s);
+    }
+  }
+
+  .user-name-wrapper {
+    margin-left: var(--spacing-s);
+    font-weight: var(--text-weight-regular);
+    cursor: pointer;
+  }
+
+  .is-not-action-link {
+    cursor: text;
+  }
+}

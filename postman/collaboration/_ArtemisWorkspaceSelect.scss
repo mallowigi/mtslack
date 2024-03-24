@@ -1,0 +1,50 @@
+.artemis-workspaces-canonical {
+  margin: auto;
+
+  &__workspaces {
+    margin: var(--spacing-l) auto 0;
+    border: var(--border-width-default) solid var(--border-color-default);
+    max-height: 160px;
+    overflow-y: auto;
+  }
+
+  &__background {
+    @include icon('../assets/images/empty-state/share-entity.svg', 160px, 160px);
+    margin: auto;
+  }
+
+  &__view-btn {
+    width: 100%;
+    height: var(--size-m);
+    margin-top: var(--spacing-l);
+  }
+
+  &__back-btn {
+    width: 100%;
+    height: var(--size-m);
+    margin-top: var(--spacing-l);
+    background-color: var(--background-color-tertiary);
+  }
+
+  &__header {
+    font-weight: var(--text-weight-medium);
+    font-size: var(--text-size-xl);
+    color: var(--content-color-primary);
+    text-align: center;
+  }
+
+  &__message {
+    color: var(--content-color-primary);
+    text-align: center;
+  }
+
+  &-item {
+    &__workspace-name {
+      margin-left: var(--spacing-m);
+    }
+  }
+}
+
+.artemis-workspaces-canonical-item.selectedWorkspace {
+  background-color: var(--highlight-background-color-primary);
+}

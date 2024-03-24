@@ -1,0 +1,35 @@
+.artemis-workspace-join {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+
+  &__background {
+    @include icon('../assets/images/empty-state/workspaces-join-artemis.svg', 160px, 160px);
+  }
+
+  &__title {
+    color: var(--content-color-primary);
+    margin: 16px 0;
+    font-size: 16px;
+    font-weight: var(--text-weight-medium);
+  }
+
+  &__description {
+    color: var(--content-color-primary);
+    font-size: 14px;
+  }
+
+  &__join-btn {
+    margin: 16px 0;
+    min-width: 136px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__browse-btn {
+    color: var(--content-color-brand);
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

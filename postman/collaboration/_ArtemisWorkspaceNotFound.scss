@@ -1,0 +1,25 @@
+.artemis-workspace-not-found {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+
+  &__title {
+    color: var(--content-color-primary);
+    margin: 16px 0;
+    font-size: 16px;
+    font-weight: var(--text-weight-medium);
+  }
+
+  &__description {
+    color: var(--content-color-primary);
+    font-size: 14px;
+  }
+
+  &__view-workspaces-btn {
+    margin: 16px 0;
+    min-width: 170px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

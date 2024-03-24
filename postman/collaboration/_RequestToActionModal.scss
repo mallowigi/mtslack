@@ -1,0 +1,17 @@
+.request-to-action-modal {
+  &__content {
+    margin-bottom: var(--spacing-s);
+
+    &__container {
+      &__counter {
+        &--error {
+          color: var(--content-color-error);
+        }
+      }
+
+      label {
+        margin: var(--spacing-l) var(--spacing-zero) var(--spacing-xs);
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.release-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  // we should never have an overflow here otherwise for small widths,
+  // contextbar would not open
+  overflow-y: hidden;
+}
+
+.release-tab {
+  display: flex;
+  flex: 1 auto;
+  flex-direction: column;
+  // ensures that this element never expands more than its container
+  min-height: 0;
+
+  .release-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    // ensures that release-content doesn't overflow the pane by resizing
+    // itself based on children's size, rather resizes children based on
+    // container size
+    min-height: 0;
+
+    .release-content-pane {
+      overflow-y: hidden;
+      overflow-x: auto;
+    }
+  }
+}

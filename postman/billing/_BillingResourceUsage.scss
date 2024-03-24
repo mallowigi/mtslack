@@ -1,0 +1,65 @@
+.resource-usage-overview {
+  &__container {
+    .alert-wrapper {
+      font-size: var(--text-size-m);
+      margin-bottom: var(--spacing-xxl);
+
+      .alert-info {
+        background-color: var(--background-color-info);
+      }
+    }
+  }
+
+  &__section-header {
+    border-bottom: var(--border-width-default) solid var(--border-color-default);
+    padding-bottom: var(--spacing-l);
+  }
+
+  &__add-ons {
+    padding-top: var(--spacing-xl);
+  }
+
+  &__included-resources {
+    padding-top: var(--spacing-xxl);
+  }
+
+  &__list {
+    padding: var(--spacing-zero) var(--spacing-s);
+  }
+
+  &__heading {
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__description {
+    display: inline-block;
+    color: var(--content-color-secondary);
+    font-size: var(--text-size-m);
+    font-weight: var(--text-weight-regular);
+    line-height: calc((var(--line-height-m) + var(--line-height-l)) / 2);
+    max-width: none;
+  }
+
+  &__disabled-tooltip {
+    margin-top: 0px;
+
+    &-wrapper {
+      display: inline-block;
+    }
+
+    &-option {
+      font-size: var(--text-size-m);
+      margin: 0;
+    }
+
+    &-heading {
+      font-weight: var(--text-weight-medium);
+    }
+
+    &-description {
+      // color: var(--grey-60);
+      margin: var(--spacing-xs) 0;
+    }
+  }
+}

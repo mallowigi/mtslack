@@ -1,0 +1,9 @@
+.hoverable-tooltip {
+  &__message {
+    padding-bottom: var(--spacing-l);
+  }
+
+  &-wrapper {
+    width: 100%;
+  }
+}

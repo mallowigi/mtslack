@@ -1,0 +1,32 @@
+.api-changelog-context-view-wrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  overflow-y: hidden;
+
+  .right-context-bar-header {
+    padding-bottom: var(--spacing-l);
+  }
+
+  .loading-indicator-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  &__refresh-button {
+    &__loading {
+      cursor: default;
+
+      svg {
+        animation: spin 1s linear infinite;
+      }
+    }
+  }
+
+  .api-changelog {
+    overflow-y: auto;
+    color: var(--content-color-primary);
+  }
+}

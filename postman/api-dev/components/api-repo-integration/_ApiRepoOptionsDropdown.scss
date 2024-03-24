@@ -1,0 +1,443 @@
+.api-repo-options {
+  margin-left: var(--spacing-m);
+  margin-right: var(--spacing-s);
+  display: flex;
+
+  .api-repo-options__button {
+    border-radius: var(--border-radius-default);
+    max-width: 200px;
+
+    &__text {
+      @include text-truncate-ellipsis;
+      margin-left: var(--spacing-xs);
+      margin-right: var(--spacing-xs);
+      display: flex;
+    }
+
+    &__repo-icon {
+      display: flex;
+    }
+
+    .api-repo-options__button__icons {
+      display: flex;
+      align-items: center;
+    }
+
+    &-warning {
+      background-color: var(--background-color-warning);
+
+      &__icon {
+        margin-right: var(--spacing-s);
+        /**
+        * Manually filling in color here because the icon is being displayed inside of a
+        * btn-tertiary. And these older buttons overrides the fill of the svg elements that
+        * are placed inside of it. Since the icon's color prop is being overridden this way,
+        * we have to add this manual override.
+        * Using !important becasue the button styling overrides this again when the button
+        * is hovered over.
+        * Keeping it specific to our css classes, so it doesn't interfere with global styling
+        * of these icons.
+        */
+        svg > path[fill] {
+          fill: var(--content-color-warning) !important;
+        }
+      }
+    }
+  }
+
+  .api-repo-options__button__status {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+
+    .api-repo-options__button__status__container {
+      display: flex;
+      justify-content: center;
+      background: var(--background-color-tertiary);
+      border-radius: 40px;
+      flex: 1;
+      margin: var(--spacing-zero);
+      color: var(--content-color-primary);
+      font-size: var(--text-size-s);
+
+      .total-push-commits {
+        color: var(--content-color-secondary);
+      }
+
+      .total-pull-commits {
+        color: var(--content-color-secondary);
+      }
+    }
+
+    .api-repo-options__button__status__container--left {
+      display: flex;
+      padding: var(--spacing-zero) var(--spacing-xs);
+      margin-right: calc(var(--spacing-xs) / 2);
+      height: var(--size-xs);
+
+      .descend-direction-icon {
+        align-items: center;
+        margin-right: calc(var(--spacing-xs) / 2);
+        width: var(--size-xs);
+        height: var(--size-xs);
+      }
+    }
+
+    .api-repo-options__button__status__container--right {
+      margin-left: calc(var(--spacing-xs) / 2);
+      height: var(--size-xs);
+      display: flex;
+      padding: var(--spacing-zero) var(--spacing-xs);
+
+      .outgoing-changes-badge {
+        background-color: var(--base-color-brand);
+        width: calc(var(--size-xs) / 3);
+        height: calc(var(--size-xs) / 3);
+        border-radius: var(--border-radius-max);
+        margin: calc(var(--spacing-xs) / 2);
+        margin-top: calc((var(--spacing-xs)) + (var(--spacing-xs) / 4));
+      }
+
+      .ascend-direction-icon {
+        align-items: center;
+        margin-right: calc(var(--spacing-xs) / 2);
+        width: var(--size-xs);
+        height: var(--size-xs);
+      }
+    }
+  }
+
+  .need-action-indicator {
+    background-color: var(--base-color-brand);
+    border-radius: 100%;
+    position: relative;
+    left: calc((var(--spacing-xs) / 2) + var(--spacing-m));
+    bottom: var(--spacing-m);
+    height: calc(var(--size-xs) / 4);
+    width: calc(var(--size-xs) / 4);
+  }
+
+  .api-repo-options__button__icons {
+    height: var(--size-xs);
+    padding: var(--spacing-s) var(--spacing-zero) var(--spacing-s) var(--spacing-s);
+  }
+
+  &:hover {
+    .splitter {
+      visibility: hidden;
+    }
+  }
+}
+
+.api-repo-options-dropdown {
+  & > .dropdown-menu {
+    overflow-y: unset !important;
+  }
+}
+
+.need-action-indicator-menu-item {
+  background-color: var(--base-color-brand);
+  border-radius: 100%;
+  position: relative;
+  left: var(--spacing-xs);
+  bottom: calc((var(--spacing-xs) / 2) + var(--spacing-xs));
+  height: calc(var(--size-xs) / 4);
+  width: calc(var(--size-xs) / 4);
+}
+
+.splitter {
+  border-width: var(--border-width-default);
+  border-left-style: solid;
+  height: calc(var(--spacing-xs) + var(--spacing-l));
+  top: calc((var(--spacing-xs) / 2) + var(--spacing-xs));
+  position: relative;
+
+  &-hide {
+    visibility: hidden;
+  }
+}
+
+.refresh-button {
+  &__loading {
+    cursor: default;
+
+    svg {
+      animation: spin 1s linear infinite;
+    }
+  }
+}
+
+.api-repo-options-menu__container {
+  &__meta-info {
+    font-size: var(--text-size-m);
+    line-height: var(--line-height-m);
+    color: var(--content-color-secondary);
+    height: 24px;
+    cursor: auto;
+
+    &__content {
+      margin-left: var(--spacing-xs);
+    }
+
+    .info-not-available {
+      color: var(--content-color-tertiary);
+    }
+
+    @include hover {
+      background-color: unset;
+    }
+
+    &__repository-name {
+      width: 128px;
+
+      span {
+        // Doing text truncation manually as Aether's
+        // Text component doesn't support truncate 'link' type texts
+        @include text-truncate-ellipsis;
+      }
+    }
+
+    &__branch-name {
+      width: 118px;
+
+      span {
+        // Doing text truncation manually as Aether's
+        // Text component doesn't support truncate 'link' type texts
+        @include text-truncate-ellipsis;
+      }
+    }
+  }
+}
+
+.api-repo-options-menu__container__classifier {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--spacing-zero) var(--spacing-l);
+  height: 17px;
+  flex: none;
+
+  .api-repo-options-menu__container__classifier__line {
+    height: 1px;
+    background: var(--highlight-background-color-tertiary);
+  }
+}
+
+.api-repo-options-menu__container__switch-branch__branches {
+  max-height: 50vh;
+  width: 240px;
+  padding-top: unset;
+  overflow: auto;
+  left: unset;
+  right: 100%;
+
+  .is-selected {
+    background-color: var(--highlight-background-color-tertiary);
+  }
+
+  .is-hidden {
+    display: none;
+  }
+
+  &__search {
+    top: 0px;
+    position: sticky;
+    z-index: 1;
+    border-radius: 0;
+    border-top: unset;
+    border-right: unset;
+    border-left: unset;
+    padding-left: var(--spacing-s);
+  }
+}
+
+.api-repo-options-menu__container__delete {
+  display: flex;
+  color: var(--content-color-error);
+  @include hover {
+    background-color: var(--base-color-error);
+    color: var(--content-color-constant);
+  }
+
+  .api-repo-options-menu__container__delete__content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: var(--text-weight-regular);
+    @include clickable;
+
+    .api-repo-options-menu__container__delete__content--text {
+      margin-right: var(--spacing-l);
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+    }
+  }
+}
+
+.api-repo-options-menu {
+  padding: var(--spacing-zero);
+  border-width: var(--spacing-zero);
+  // This is done to avoid scroll on dropdown header
+  // and !important is used to override the default overflow: auto
+  // that DropdownMenu ships with
+  overflow-y: hidden !important;
+
+  .api-repo-options-menu__container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color-primary);
+    border-radius: var(--border-radius-default);
+    padding-bottom: var(--spacing-xs);
+    max-height: 100%;
+    width: 193px;
+
+    &__content {
+      overflow-y: auto;
+    }
+
+    .api-repo-options-menu__container__header {
+      display: flex;
+      flex-direction: column;
+      padding-left: var(--spacing-l);
+      margin-top: var(--spacing-s);
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+      color: var(--content-color-secondary);
+
+      &__repository-name {
+        padding: 0 var(--spacing-xs) var(--spacing-xs) 0;
+
+        &-text {
+          width: 112px;
+
+          span {
+            @include text-truncate-ellipsis;
+          }
+        }
+      }
+
+      &__branch-name {
+        padding: 0 var(--spacing-xs) var(--spacing-xs) 0;
+
+        &-text {
+          width: 112px;
+
+          span {
+            @include text-truncate-ellipsis;
+          }
+        }
+      }
+    }
+
+    .api-repo-options-menu__container__classifier {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: var(--spacing-zero) var(--spacing-l);
+      height: 17px;
+      flex: none;
+
+      .api-repo-options-menu__container__classifier__line {
+        height: 1px;
+        background: var(--highlight-background-color-tertiary);
+      }
+    }
+
+    .api-repo-options__switch-branch {
+      width: 100%;
+
+      .api-repo-options__switch-branch__button {
+        justify-content: unset;
+        padding-left: var(--spacing-l);
+        width: 100%;
+
+        .api-repo-options__switch-branch__button-text {
+          margin-right: var(--spacing-xxxl);
+        }
+      }
+    }
+
+    .api-repo-options-menu__container__option {
+      display: flex;
+      flex-direction: column;
+
+      &.is-disabled {
+        :hover {
+          background-color: initial;
+        }
+
+        color: var(--content-color-tertiary);
+        cursor: not-allowed;
+      }
+
+      :hover {
+        background-color: var(--highlight-background-color-tertiary);
+      }
+
+      .api-repo-options-menu__container__option__item {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: var(--text-weight-regular);
+        padding-top: var(--spacing-s);
+        padding-bottom: var(--spacing-s);
+        overflow-y: auto;
+        @include clickable;
+
+        &.is-disabled {
+          color: var(--content-color-tertiary);
+          cursor: not-allowed;
+        }
+
+        .api-repo-options-menu__container__option__item__action {
+          color: var(--content-color-primary);
+          margin-left: var(--spacing-l);
+          margin-right: var(--spacing-l);
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-m);
+          // TODO: Consolidate these disabled states into a single place
+          // this will become harder to maintain otherwise
+          &.is-disabled {
+            color: var(--content-color-tertiary);
+            cursor: not-allowed;
+          }
+        }
+      }
+    }
+
+    .api-repo-options-menu__container__delete {
+      display: flex;
+      flex-direction: column;
+      color: var(--content-color-error);
+
+      :hover {
+        background-color: var(--base-color-error);
+        color: var(--content-color-constant);
+      }
+
+      .api-repo-options-menu__container__delete__content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-weight: var(--text-weight-regular);
+        padding-top: var(--spacing-s);
+        padding-bottom: var(--spacing-s);
+        margin-bottom: var(--spacing-xxs);
+        overflow-y: auto;
+        @include clickable;
+
+        .api-repo-options-menu__container__delete__content--text {
+          margin-left: var(--spacing-l);
+          margin-right: var(--spacing-l);
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-m);
+        }
+      }
+    }
+  }
+}

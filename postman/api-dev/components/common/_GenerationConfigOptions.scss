@@ -1,0 +1,23 @@
+.generation-config-options__toggle-button {
+  display: inline-flex;
+  align-items: center;
+  margin-top: var(--spacing-l);
+  font-weight: var(--text-weight-medium);
+  color: var(--content-color-link);
+  cursor: pointer;
+
+  .toggle-button-icon {
+    margin-right: var(--spacing-xs);
+  }
+}
+
+.generation-config-options-wrapper {
+  margin-top: var(--spacing-s);
+  padding: var(--spacing-m);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+  border-radius: var(--border-radius-default);
+  border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+  min-width: 30%;
+}

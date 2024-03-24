@@ -1,0 +1,24 @@
+.api-repository-integration-entity-select-dropdown__empty-state {
+  margin: 0 var(--spacing-l);
+  cursor: pointer;
+  max-inline-size: -webkit-fill-available;
+  width: -webkit-fill-available;
+}
+
+.api-repository-integration-entity-select-dropdown.is-open {
+  border: var(--border-width-l) var(--border-style-solid) var(--blue-30);
+}
+
+.api-repository-integration-entity-select-dropdown.is-error {
+  border: var(--border-width-default) var(--border-style-solid) var(--red-60);
+}
+
+.api-repository-integration-entity-select-dropdown-menu {
+  overflow-x: hidden;
+
+  &__loader {
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-xs);
+  }
+}

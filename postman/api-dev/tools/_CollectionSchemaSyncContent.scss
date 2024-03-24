@@ -1,0 +1,28 @@
+.collection-schema-sync-content__request {
+  margin-left: var(--spacing-xs);
+
+  &-method {
+    display: inline;
+    font-size: var(--text-size-m);
+    font-weight: var(--text-weight-medium);
+    line-height: 1.4;
+  }
+}
+
+.collection-schema-sync-content__collapsible {
+  background: var(--background-color-secondary);
+}
+
+.collection-schema-sync-content__collapsible-container {
+  overflow: hidden;
+}
+
+.collection-schema-sync-content__diff-section {
+  padding-left: var(--spacing-xxl) !important;
+  margin-left: var(--spacing-s);
+}
+
+.collection-schema-sync-content__container {
+  overflow: auto !important;
+  flex: 1 !important;
+}

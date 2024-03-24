@@ -1,0 +1,8 @@
+.release-tab-contents {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 600px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

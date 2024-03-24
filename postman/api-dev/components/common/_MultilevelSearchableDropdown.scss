@@ -1,0 +1,105 @@
+$dropdown-width: 478px;
+$margin-total: 32px;
+$right-arrow-width: 32px;
+.api-dev-multilevel-searchable-dropdown-wrapper {
+  .dropdown {
+    width: 100%;
+
+    .dropdown-button {
+      width: 100%;
+      justify-content: space-between;
+      background-color: initial;
+    }
+  }
+
+  &.is-disabled {
+    background-color: var(--background-color-secondary);
+    border-color: var(--border-color-strong);
+    cursor: not-allowed;
+  }
+}
+
+.multilevel-searchable-dropdown {
+  div.search-input {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    margin: var(--spacing-xs) var(--spacing-zero);
+    border-radius: initial;
+    margin-top: var(--spacing-zero);
+    padding: var(--spacing-s) var(--spacing-l);
+    border: 0px;
+    border-bottom: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+  }
+
+  .dropdown-menu {
+    padding: var(--spacing-zero);
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius-default);
+
+    &__previous-button-wrapper {
+      .btn {
+        border-radius: initial;
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
+    &__previous-button-text {
+      width: $dropdown-width - $right-arrow-width - $margin-total;
+      padding-left: var(--spacing-m);
+    }
+
+    .loading-indicator-wrapper {
+      display: flex;
+      justify-content: center;
+      padding: var(--spacing-l);
+    }
+  }
+
+  .dropdown-menu-item {
+    cursor: pointer;
+
+    &--default {
+      position: sticky;
+      bottom: 0;
+      border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-strong);
+      margin-top: var(--spacing-s);
+      margin-bottom: var(--spacing-s);
+    }
+
+    .item-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+
+      .item-text {
+        @include text-truncate-ellipsis;
+      }
+    }
+  }
+
+  .empty-dropdown-menu-message {
+    justify-content: center;
+    display: flex;
+    color: var(--content-color-tertiary);
+    font-size: var(--text-size-m);
+    flex-grow: 1;
+    padding: var(--spacing-l);
+    text-align: center;
+
+    span {
+      align-self: center;
+    }
+  }
+
+  .selected-label {
+    width: $dropdown-width - $right-arrow-width - $margin-total;
+    color: var(--content-color-primary);
+    font-weight: var(--text-weight-regular);
+    font-size: var(--text-size-m);
+  }
+}

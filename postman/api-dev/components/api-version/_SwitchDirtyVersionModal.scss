@@ -1,0 +1,30 @@
+.unsaved-api-version-confirmation-modal {
+  .unsaved-api-version-confirmation-modal__footer {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    .unsaved-api-version-confirmation-modal__footer__left {
+      display: flex;
+      flex: 1;
+
+      & > .btn.is-focused {
+        border: 1px solid $modal-button-focus-border-color;
+      }
+    }
+
+    .unsaved-api-version-confirmation-modal__footer__right {
+      flex: 0 0 auto;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+
+      & > .btn {
+        margin-left: var(--spacing-m);
+        @include focus {
+          border: 1px solid $modal-button-focus-border-color;
+        }
+      }
+    }
+  }
+}

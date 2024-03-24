@@ -1,0 +1,35 @@
+.release-list-empty {
+  margin-top: var(--spacing-m);
+}
+
+.release-list-item {
+  .release-header {
+    display: flex;
+    height: 20px;
+    align-items: center;
+    flex-direction: row;
+    margin-top: var(--spacing-l);
+
+    &__name {
+      font-size: var(--text-size-m);
+      color: var(--content-color-secondary);
+      cursor: pointer;
+      font-weight: var(--text-weight-bold);
+    }
+
+    .git-tag {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+
+      &__icon {
+        line-height: var(--line-height-s);
+        margin-right: var(--spacing-xs);
+      }
+    }
+
+    .view-release-button {
+      display: none;
+    }
+  }
+}

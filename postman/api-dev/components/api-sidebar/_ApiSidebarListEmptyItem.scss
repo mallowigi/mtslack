@@ -1,0 +1,107 @@
+.api-sidebar-list-empty-item {
+  font-family: $font-primary;
+  font-size: 12px;
+  color: var(--content-color-secondary);
+  padding: 20px 15px;
+  text-align: center;
+
+  .entity-empty {
+    border: none;
+    padding: 30px 25px 40px 25px;
+
+    .entity-empty__title {
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .entity-empty__subtitle {
+      margin-bottom: 24px;
+    }
+
+    .entity-empty__title,
+    .entity-empty__subtitle {
+      @include unselectable;
+    }
+
+    .entity-empty__learn {
+      .entity-empty__learn__mouse-click-icon {
+        padding-right: 8px;
+      }
+    }
+  }
+}
+
+.api-sidebar-empty {
+  &__down {
+    padding-right: var(--spacing-s);
+    padding-left: var(--spacing-s);
+    display: flex;
+    flex: 1;
+
+    &-section {
+      border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      .lesson-container {
+        border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+        border-radius: var(--border-radius-default);
+        margin-top: var(--spacing-m);
+
+        .lesson-section {
+          display: flex;
+          flex: 1;
+          border-bottom: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+
+          .lesson-img {
+            display: flex;
+
+            &__content {
+              @include icon('../assets/images/thumbnails/astronaut-postman.svg', 86px, 87px);
+              flex: 1;
+            }
+          }
+
+          .lesson-txt {
+            align-self: center;
+            flex-direction: column;
+            display: flex;
+            flex: 1 0 58%;
+            padding-right: var(--spacing-l);
+
+            &__header {
+              font-weight: var(--text-weight-medium);
+              color: var(--content-color-secondary);
+              flex: 1;
+              display: flex;
+              font-size: var(--text-size-s);
+              line-height: var(--line-height-s);
+            }
+
+            &__summary {
+              font-size: var(--text-size-s);
+              line-height: var(--line-height-s);
+              font-weight: var(--text-weight-regular);
+              flex: 1;
+              display: flex;
+              color: var(--content-color-secondary);
+            }
+          }
+        }
+
+        .lesson-start {
+          display: flex;
+          flex: 1;
+          flex-direction: column;
+          padding: var(--spacing-s) var(--spacing-zero);
+
+          &__btn {
+            font-size: var(--text-size-s);
+            line-height: var(--line-height-s);
+          }
+        }
+      }
+    }
+  }
+}

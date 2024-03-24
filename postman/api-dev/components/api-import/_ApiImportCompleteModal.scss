@@ -1,0 +1,98 @@
+.api-import-complete-modal {
+  .modal-content {
+    .imported-data-status-wrapper {
+      padding: var(--spacing-l) var(--spacing-xxxl);
+
+      .imported-data-status__title {
+        font-weight: var(--text-weight-medium);
+        line-height: var(--line-height-m);
+        margin-bottom: var(--spacing-l);
+      }
+
+      .imported-data-status__subtitle {
+        display: flex;
+        flex-direction: column;
+
+        .imported-data-status--failed,
+        .imported-data-status--passed {
+          display: flex;
+
+          i {
+            margin-right: var(--spacing-m);
+          }
+        }
+
+        .imported-data-status--failed {
+          margin-bottom: var(--spacing-l);
+        }
+      }
+    }
+
+    .content-separator {
+      display: flex;
+      padding-left: var(--spacing-xxxl);
+      padding-right: var(--spacing-l);
+      margin-top: var(--spacing-xxl);
+      margin-bottom: var(--spacing-l);
+
+      .separator__title {
+        font-weight: var(--text-weight-medium);
+        color: var(--content-color-secondary);
+      }
+
+      .separator__horizontal {
+        flex: 1;
+        margin-left: var(--spacing-s);
+        position: relative;
+        top: var(--spacing-s);
+        border-top: var(--border-width-default) solid var(--border-color-default);
+      }
+    }
+
+    .after-import-section {
+      padding: var(--spacing-s);
+
+      .after-import-options {
+        .after-import-option {
+          padding: var(--spacing-s);
+          display: flex;
+          margin-bottom: var(--spacing-m);
+
+          &:last-child {
+            margin-bottom: var(--spacing-zero);
+          }
+
+          .option__bullet-point-wrapper {
+            font-size: var(--text-size-xs);
+            flex: 0 0 var(--size-m);
+          }
+
+          .option__text-wrapper {
+            margin-right: var(--spacing-xxl);
+
+            .option__label {
+              font-weight: var(--text-weight-medium);
+              margin-bottom: var(--spacing-xs);
+            }
+
+            .option__description {
+              color: var(--content-color-secondary);
+            }
+          }
+
+          .option__toggle-switch-wrapper {
+            display: flex;
+            flex: 1;
+            justify-content: flex-end;
+            align-items: flex-start;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    border-top: var(--border-width-default) solid var(--border-color-default);
+    padding: var(--spacing-l);
+  }
+}

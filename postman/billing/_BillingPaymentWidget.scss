@@ -1,0 +1,18 @@
+.payment-widget {
+  &__loader {
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__heading {
+    font-size: var(--text-size-m);
+    line-height: var(--line-height-l);
+  }
+
+  &__card-details {
+    font-size: var(--text-size-m);
+    color: var(--content-color-secondary);
+  }
+}

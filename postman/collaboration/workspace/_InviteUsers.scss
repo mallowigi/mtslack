@@ -1,0 +1,43 @@
+$invite-email-avatar-background-color: var(--background-color-tertiary);
+$invite-email-pending-info-color: var(--content-color-secondary);
+.workspace-invite-input-file-drop {
+  display: flex;
+  flex: 1;
+}
+
+.workspace-invite-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-size: var(--text-size-m);
+  height: 100%;
+}
+
+.workspace-invite-tag {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  overflow: hidden;
+
+  .avatar {
+    margin: 0 var(--spacing-xs);
+  }
+
+  .user-email {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .user-group {
+    width: calc(var(--size-s) / 2);
+    height: calc(var(--size-s) / 2);
+    padding: calc(var(--spacing-xs) / 2);
+    margin: 0 var(--spacing-xs);
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    background: var(--background-color-tertiary);
+    border-radius: var(--border-radius-max);
+  }
+}

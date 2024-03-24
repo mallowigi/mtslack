@@ -1,0 +1,86 @@
+.workspace-invite-container {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  height: 100%;
+  min-height: 70px;
+  max-height: 196px;
+  overflow-y: auto;
+  border: var(--border-width-default) var(--border-style-solid) var(--content-color-tertiary);
+  box-sizing: border-box;
+  border-radius: var(--border-radius-default);
+  // Added to display red border around the input field in case when 0 invites are left with the user.
+  &__teamPlan_alert {
+    border: var(--border-width-default) var(--border-style-solid) var(--highlight-background-color-error);
+  }
+
+  &__onFocus {
+    border: var(--border-width-default) var(--border-style-solid) var(--input-border-color-focus);
+    box-shadow: 0px 0px 0px 2px var(--input-shadow-focus);
+  }
+
+  &__onError {
+    border: var(--border-width-default) var(--border-style-solid) var(--highlight-background-color-error);
+    box-shadow: unset;
+  }
+
+  &__empty-state--with-alert {
+    font-size: var(--text-size-m);
+    line-height: var(--line-height-m);
+    color: var(--content-color-error);
+    margin-left: var(--spacing-xxl);
+    margin-top: var(--spacing-s);
+  }
+
+  .invite-placeholder {
+    margin-left: var(--spacing-s);
+    position: absolute;
+    color: var(--content-color-tertiary);
+  }
+
+  .active-input {
+    flex: 1;
+    align-items: center;
+    color: var(--content-color-primary);
+    padding: var(--spacing-xs) var(--spacing-xs) var(--spacing-xs) var(--spacing-s);
+    margin: var(--spacing-xs);
+  }
+}
+
+.ws-invite-team-users-dropdown {
+  background-color: var(--background-color-primary);
+
+  .team-user-suggestion {
+    height: 56px;
+
+    &__name {
+      max-width: calc(8 * var(--spacing-xxl));
+      @include text-truncate-ellipsis;
+    }
+
+    .avatar {
+      margin-right: var(--spacing-s);
+    }
+
+    &__email {
+      margin-top: var(--spacing-xs);
+      color: var(--content-color-secondary);
+    }
+
+    &__role {
+      margin-top: var(--spacing-s);
+      color: var(--content-color-secondary);
+    }
+
+    .team-user-suggestion__group-tag {
+      width: var(--size-s);
+      height: var(--size-s);
+      margin-right: var(--spacing-s);
+      align-items: center;
+      justify-content: center;
+      align-self: center;
+      background: var(--background-color-tertiary);
+      border-radius: var(--border-radius-max);
+    }
+  }
+}

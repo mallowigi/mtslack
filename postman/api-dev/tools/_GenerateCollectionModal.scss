@@ -1,0 +1,88 @@
+.generate-collection-modal {
+  line-height: var(--line-height-m);
+  display: flex;
+
+  .generate-collection-content-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0;
+
+    .generation-config-options-container {
+      height: 30vh;
+    }
+
+    .collection-name-input {
+      .input-field {
+        margin-bottom: var(--spacing-xs);
+      }
+
+      .collection-name__error {
+        visibility: hidden;
+        color: var(--content-color-error);
+        font-size: var(--text-size-s);
+        margin-bottom: var(--spacing-s);
+      }
+
+      &.is-required {
+        .collection-name__error {
+          visibility: visible;
+        }
+      }
+    }
+
+    .api-elements-options-wrapper {
+      .api-elements-options {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin-top: var(--spacing-l);
+
+        .api-element {
+          @include unselectable;
+          display: flex;
+          margin: var(--spacing-xs);
+          align-items: center;
+          flex: 1 0 220px;
+          padding: var(--spacing-xs) var(--spacing-s);
+          cursor: pointer;
+
+          .api-elements-options__card {
+            display: flex;
+            align-items: flex-end;
+            margin-left: var(--spacing-l);
+          }
+
+          &:hover {
+            background-color: var(--highlight-background-color-primary);
+            border-radius: var(--spacing-xs);
+          }
+
+          .api-element-icon {
+            align-self: center;
+            display: flex;
+
+            i {
+              height: auto;
+              width: auto;
+            }
+
+            svg {
+              width: var(--size-s);
+              height: var(--size-s);
+            }
+          }
+
+          .api-element-button-text {
+            display: flex;
+            flex-direction: column;
+            margin-left: var(--spacing-l);
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+  }
+}

@@ -1,0 +1,57 @@
+.new-api-options-tab {
+  overflow: auto;
+
+  .api-name-label {
+    color: var(--content-color-primary);
+    display: flex;
+    align-items: center;
+    font-size: var(--text-size-l);
+    font-weight: var(--text-weight-medium);
+    min-width: 0px;
+    flex-grow: 0.5;
+
+    h2 {
+      @include text-truncate-ellipsis;
+    }
+
+    .edit-icon-rename {
+      display: none;
+      margin-right: var(--spacing-xs);
+      margin-left: var(--spacing-xs);
+      @include hover {
+        @include icon-color(var(--content-color-primary));
+      }
+    }
+
+    @include hover {
+      .edit-icon-rename {
+        display: inline-flex;
+        cursor: pointer;
+      }
+      .copy-link-icon {
+        display: inline-flex;
+        cursor: pointer;
+      }
+    }
+
+    .copy-link-icon {
+      display: none;
+      margin-right: var(--spacing-xs);
+    }
+
+    .api-name-input {
+      min-width: var(--size-s);
+      margin-right: var(--spacing-xs);
+      font-size: var(--text-size-l);
+      @include text-truncate-ellipsis;
+    }
+  }
+
+  .repo-options-list {
+    row-gap: var(--spacing-l);
+  }
+
+  .connect-repo-heading-view {
+    text-align: center;
+  }
+}

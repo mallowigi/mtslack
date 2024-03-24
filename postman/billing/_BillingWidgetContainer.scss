@@ -1,0 +1,39 @@
+.billing-widget {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-m) var(--spacing-s);
+    border-bottom: var(--border-width-default) solid var(--border-color-default);
+    border-radius: 4px;
+    position: relative;
+    box-sizing: border-box;
+
+    .invoices-overview {
+      width: 86%;
+    }
+  }
+
+  &__inner-container {
+    height: 100%;
+    width: 75%;
+  }
+
+  &__action-link {
+    color: var(--content-color-link);
+    font-size: var(--text-size-m);
+    cursor: pointer;
+  }
+}
+
+.widget-empty-state {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: var(--text-size-s);
+  color: var(--content-color-secondary);
+
+  &__icon {
+    margin-right: var(--spacing-s);
+  }
+}

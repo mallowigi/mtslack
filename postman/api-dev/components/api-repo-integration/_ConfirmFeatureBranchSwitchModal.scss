@@ -1,0 +1,44 @@
+.switch-branch-modal {
+  display: flex;
+  max-height: 70vh;
+
+  .modal-content {
+    padding: var(--spacing-l) var(--spacing-xl) var(--spacing-zero) var(--spacing-xl);
+  }
+
+  .switch-branch-modal__content {
+    margin-bottom: var(--spacing-l);
+
+    &__label {
+      font-weight: var(--text-weight-medium);
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      font-size: var(--text-size-l);
+      line-height: var(--line-height-l);
+      margin-bottom: var(--spacing-m);
+    }
+  }
+
+  .switch-branch-modal__footer {
+    .switch-branch-modal__footer__buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      .switch-branch-modal__footer__add-button {
+        margin-left: var(--spacing-s);
+        margin-right: var(--spacing-xl);
+      }
+
+      .switch-branch-modal__footer__button {
+        height: var(--size-m);
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: var(--spacing-zero);
+  }
+}

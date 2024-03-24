@@ -1,0 +1,143 @@
+.role-list-show-more {
+  max-width: calc(2 * var(--size-m));
+}
+
+.workspace-role-user-meta {
+  max-width: 300px;
+}
+
+.workspace-role-user-meta-name {
+  max-width: 65%;
+}
+
+.ws-settings-role-dropdown {
+  padding-right: 0px;
+
+  i {
+    margin-left: var(--spacing-xs);
+  }
+}
+
+.workspace-role-dropdown-menu {
+  width: 100%;
+  min-width: 316px;
+  background-color: var(--background-color-primary);
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
+  border: none;
+
+  .dropdown-menu-item.is-disabled {
+    cursor: not-allowed;
+  }
+
+  .dropdown-menu-item.partner-lead-option {
+    cursor: unset;
+  }
+
+  .partner-role {
+    padding-top: var(--spacing-xs);
+  }
+
+  .selected-role-icon {
+    padding-top: var(--spacing-xs);
+  }
+
+  .dropdown-menu-item {
+    height: auto;
+    padding: var(--spacing-zero);
+  }
+
+  .role-list-item {
+    max-width: 100%;
+    padding-right: var(--spacing-s);
+    padding-left: var(--spacing-s);
+  }
+
+  .dropdown-menu-item span {
+    white-space: unset;
+  }
+
+  .role-list-item-data {
+    width: 100%;
+  }
+
+  .role-remove-button {
+    color: var(--content-color-error);
+    border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+  }
+
+  .partner-lead-option {
+    border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+  }
+
+  .role-remove-button:hover {
+    color: var(--content-color-constant);
+    background-color: var(--base-color-error);
+  }
+}
+
+.ws-role-list-group-avatar {
+  cursor: pointer;
+}
+
+.workspace-roles-list-item__members-list {
+  width: 240px;
+  max-height: 300px;
+
+  .tooltip-wrapper {
+    padding: var(--spacing-xl);
+  }
+
+  &__title {
+    display: flex;
+    font-weight: var(--text-weight-bold);
+    margin-bottom: var(--spacing-xs);
+    font-size: var(--text-size-m);
+    line-height: var(--line-height-s);
+
+    &__group-name {
+      max-width: 108px;
+      @include text-truncate-ellipsis;
+    }
+
+    &__no-members {
+      max-width: unset;
+    }
+  }
+
+  &__content {
+    max-height: 282px;
+    overflow-y: auto;
+    margin-bottom: var(--spacing-l);
+    font-weight: var(--text-weight-regular);
+
+    &__no-members {
+      margin-top: var(--spacing-xs);
+
+      label {
+        line-height: var(--line-height-m);
+      }
+    }
+
+    &__item {
+      display: flex;
+      margin-top: var(--spacing-s);
+      align-items: center;
+
+      &__name {
+        margin-left: var(--spacing-s);
+        max-width: 176px;
+        @include text-truncate-ellipsis;
+      }
+    }
+  }
+
+  &__btn {
+    margin-top: var(--spacing-xs);
+    max-width: calc(3 * var(--size-m));
+  }
+
+  &__no-members {
+    margin-bottom: var(--spacing-s);
+  }
+}

@@ -1,0 +1,10 @@
+.access-request {
+  &__role-dropdown {
+    height: var(--size-s);
+    padding: var(--spacing-zero) var(--spacing-s);
+
+    i {
+      margin-left: var(--spacing-xs);
+    }
+  }
+}

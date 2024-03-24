@@ -1,0 +1,36 @@
+.future-instructions-widget,
+.current-plan-details-widget {
+  &__empty {
+    font-size: var(--text-size-m);
+    color: var(--content-color-tertiary);
+  }
+
+  &__amount {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  &__plan-details {
+    font-size: var(--text-size-m);
+    color: var(--content-color-secondary);
+  }
+
+  &__badge {
+    margin-right: var(--spacing-s);
+    margin-left: var(--spacing-zero);
+  }
+
+  &__tooltip {
+    display: flex !important;
+    align-items: center;
+    margin-left: var(--spacing-s);
+  }
+}

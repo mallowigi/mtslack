@@ -1,0 +1,89 @@
+$container-width-medium: 984px;
+.api-tab-body {
+  .accordion {
+    border-top: 0;
+  }
+
+  .api-tab-body__default {
+    margin: var(--spacing-xxl) auto var(--spacing-l);
+    max-width: $container-width-medium;
+    padding: var(--spacing-zero) calc(var(--spacing-xl) - var(--spacing-xs)) var(--spacing-zero) var(--spacing-xl);
+
+    &__shrunk {
+      width: 100%;
+    }
+
+    &__expanded {
+      overflow: hidden;
+    }
+
+    &__left-pane {
+      flex: 2;
+    }
+
+    &__right-pane {
+      flex: 1;
+      max-width: 300px;
+      margin-left: var(--spacing-xl);
+      margin-right: var(--spacing-l);
+      background: var(--background-color-secondary);
+      border-radius: var(--border-radius-default);
+      box-shadow: 0 0 0 1px var(--popover-outline-color) inset;
+      height: max-content;
+
+      .right-tile {
+        max-width: 300px;
+        margin-right: var(--spacing-zero);
+        padding-right: var(--spacing-xl);
+        padding-top: var(--spacing-xl);
+
+        + .right-tile {
+          border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+        }
+
+        h4 {
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-m);
+        }
+
+        .api-tile__body {
+          margin-top: var(--spacing-zero);
+          margin-bottom: var(--spacing-xl);
+        }
+      }
+    }
+  }
+
+  .api-tab-body__screen {
+    &__back-btn {
+      margin-left: var(--spacing-m);
+    }
+  }
+
+  .is-hidden {
+    display: none;
+  }
+}
+
+.api-tab-body__default__tile-body {
+  border-top: 1px solid var(--border-color-default);
+  border-bottom: 1px solid var(--border-color-default);
+  padding-right: var(--spacing-xs);
+
+  &:hover {
+    .api-tab-body__default__tile-heading__action-item {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+.api-tab-body__default__tile-body + .api-tab-body__default__tile-body {
+  border-top: none;
+}
+
+.api-tab-body__default__tile-heading__action-item {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+}

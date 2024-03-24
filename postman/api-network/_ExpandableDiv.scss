@@ -1,0 +1,37 @@
+.expandable-div {
+  position: relative;
+  overflow-y: hidden;
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--size-m);
+    border-radius: var(--border-radius-default);
+    background: linear-gradient(to top, var(--highlight-background-color-secondary), rgba(255, 255, 255, 0));
+    pointer-events: all;
+  }
+
+  &__expand-button {
+    position: absolute;
+    bottom: var(--spacing-s);
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--background-color-primary);
+    border: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+    color: var(--content-color-primary);
+    padding: var(--spacing-xs) var(--spacing-m);
+    font-size: var(--text-size-m);
+    pointer-events: all;
+    font-family: var(--text-family-default);
+    // Right now we don't have a design token for border radius to make button edges rounded
+    // border-radius-max makes the border radius 100% which not what we want, so using a large number
+    // works in the interim.
+    border-radius: 999px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}

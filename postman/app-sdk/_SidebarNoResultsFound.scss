@@ -1,0 +1,36 @@
+.sidebar-no-results-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+
+  &__illustration {
+    height: 120px;
+    width: 140px;
+    margin-bottom: var(--spacing-l);
+  }
+
+  &__head-and-body {
+    margin-bottom: var(--spacing-l);
+
+    & > div:not(:last-child) {
+      margin-bottom: var(--spacing-s);
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    display: flex;
+
+    span {
+      display: inline-block;
+      // customizing body-small styles here
+      // because there is a mismatch between the design specs & the actual design system component styles
+      line-height: 18px;
+    }
+  }
+}

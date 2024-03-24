@@ -1,0 +1,67 @@
+.invite-workspace-modal {
+  .invite-workspace-modal__modal-content {
+    overflow-y: unset;
+    font-size: var(--text-size-m);
+
+    .invite-file-upload {
+      :hover {
+        color: var(--content-color-primary);
+      }
+
+      cursor: pointer;
+      height: 100%;
+      font-size: var(--text-size-s);
+    }
+  }
+
+  .invite-workspace-modal__input-area {
+    margin-bottom: var(--spacing-l);
+  }
+
+  .invite-workspace-modal__footer {
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-s);
+    border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-strong);
+  }
+
+  .invite-workspace-modal__manage-team {
+    color: var(--content-color-secondary);
+  }
+
+  .btn {
+    padding-left: 0px;
+  }
+}
+
+.ws-invite-link {
+  padding-left: var(--spacing-zero);
+  color: var(--content-color-link);
+
+  svg {
+    path {
+      fill: var(--content-color-link);
+    }
+  }
+}
+
+.ws-invite-link-copied {
+  padding-left: var(--spacing-zero);
+  color: var(--content-color-success);
+
+  svg {
+    path {
+      fill: var(--content-color-success);
+    }
+  }
+}
+
+.ws-invite-link:hover {
+  background-color: inherit;
+  color: var(--blue-80);
+
+  svg {
+    path {
+      fill: var(--blue-80);
+    }
+  }
+}

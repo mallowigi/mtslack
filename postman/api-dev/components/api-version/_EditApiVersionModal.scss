@@ -1,0 +1,155 @@
+.api-version-edit-modal {
+  display: flex;
+
+  .api-version-edit-modal__content {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    color: var(--content-color-primary);
+
+    .api-version-edit-modal__content__label {
+      font-weight: var(--text-weight-medium);
+      color: var(--content-color-secondary);
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-s);
+    }
+
+    .api-version-edit-modal__content__input {
+      margin-top: var(--spacing-xs);
+      margin-bottom: var(--spacing-s);
+    }
+
+    .api-version-edit-modal__content__visibility {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: var(--spacing-l);
+
+      .input-checkbox {
+        height: calc(var(--size-s) / 2);
+        min-width: calc(var(--size-s) / 2);
+        width: calc(var(--size-s) / 2);
+        margin-right: var(--spacing-s);
+
+        &.is-selected {
+          background-color: var(--base-color-info);
+        }
+      }
+
+      .api-version-edit-modal__content__visibility-label {
+        line-height: var(--line-height-s);
+        @include clickable;
+        user-select: none;
+        font-size: var(--text-size-m);
+      }
+
+      .api-version-edit-modal__content__visibility-info {
+        display: inline-flex;
+        margin-left: var(--spacing-s);
+      }
+    }
+
+    .api-version-edit-modal__content__dropdown {
+      display: flex;
+      margin-top: var(--spacing-s);
+      margin-bottom: var(--spacing-l);
+      flex-direction: column;
+
+      .api-version-edit-modal__content__dropdown__label {
+        font-weight: var(--text-weight-medium);
+        color: var(--content-color-secondary);
+        font-size: var(--text-size-m);
+        line-height: var(--line-height-s);
+      }
+
+      .dropdown {
+        flex: 1;
+        min-width: 0;
+        margin-top: var(--spacing-xs);
+
+        .api-version-edit-modal__content__dropdown-button {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-m);
+
+          .api-version-edit-modal__content__dropdown-value {
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: pre;
+            font-weight: var(--text-weight-regular);
+            color: var(--content-color-primary);
+          }
+        }
+      }
+    }
+
+    .api-version-edit-modal__content__summary {
+      margin-bottom: var(--spacing-l);
+
+      .api-version-edit-modal__content__summary__label {
+        color: var(--content-color-secondary);
+        margin-bottom: var(--spacing-xs);
+        font-weight: var(--text-weight-bold);
+        font-weight: var(--text-weight-medium);
+        font-size: var(--text-size-m);
+        line-height: var(--line-height-s);
+      }
+
+      .textarea {
+        height: 74px;
+        font-size: var(--text-size-m);
+      }
+    }
+
+    .api-version-edit-modal__content__banner {
+      background-color: var(--background-color-warning);
+      color: var(--content-color-primary);
+      display: flex;
+      align-items: center;
+      padding: var(--spacing-l);
+
+      .api-version-edit-modal__content__banner__content {
+        margin-left: var(--spacing-m);
+        font-size: var(--text-size-m);
+      }
+    }
+  }
+
+  .api-version-edit-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .api-version-edit-modal__footer__save-button {
+      margin-left: var(--spacing-s);
+    }
+  }
+
+  .modal-header {
+    height: 66px;
+    align-items: center;
+
+    .modal-header-title {
+      font-weight: var(--text-weight-medium);
+      font-size: var(--spacing-l);
+      line-height: var(--line-height-m);
+      display: flex;
+      align-items: center;
+      padding-left: var(--spacing-xl);
+      padding-bottom: var(--spacing-xl);
+      padding-top: 22px;
+      color: var(--content-color-primary);
+    }
+  }
+
+  .modal-content {
+    flex: initial;
+    padding-top: var(--spacing-s);
+    padding-bottom: var(--spacing-xs);
+  }
+
+  .modal-footer {
+    padding: var(--spacing-zero);
+  }
+}

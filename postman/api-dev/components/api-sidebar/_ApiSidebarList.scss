@@ -1,0 +1,131 @@
+.api-sidebar-list {
+  flex: 1;
+  overflow-y: auto;
+  // API Sidebar is not virtualized. So any changes to the height
+  // of the item will force the browser to re-layout the whole list
+  // adding a fixed height and width to the list item
+  // and containing the layout
+  .collection-list__loading-indicator {
+    contain: layout size;
+    display: flex;
+    margin-left: 65px;
+    height: 28px;
+    width: 16px;
+    align-items: center;
+  }
+
+  .environment-list__loading-indicator {
+    display: flex;
+    margin-left: 65px;
+    height: 28px;
+    align-items: center;
+  }
+
+  &:hover {
+    .api-sidebar-list__item__left-section__indent {
+      height: 100%;
+      width: 11px;
+      border-right: thin solid var(--border-color-default);
+    }
+
+    .collection-sidebar__indent {
+      &:not(.active-indent) {
+        border-right: thin solid var(--border-color-default);
+      }
+    }
+
+    .api-definition-item__left-section__indent {
+      border-right: thin solid var(--border-color-default);
+    }
+  }
+
+  .sidebar-list-item {
+    @include focus {
+      background-color: unset;
+      border-radius: unset;
+      box-shadow: 0px 0px 0px 2px var(--blue-30) inset;
+    }
+  }
+
+  .sidebar-list-item__name {
+    margin-right: var(--spacing-xs);
+  }
+
+  .sidebar-list-item__content-wrapper {
+    margin-left: var(--spacing-zero);
+  }
+
+  .sidebar-list-item__left-actions-container {
+    position: relative;
+  }
+
+  .api-sidebar-list-right-meta-content {
+    margin-left: var(--spacing-xs);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+
+    &__text {
+      max-width: 120px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    &__icon {
+      overflow: unset;
+    }
+
+    i {
+      margin-top: var(--spacing-xs);
+    }
+  }
+
+  .branch-switcher {
+    position: absolute;
+
+    .aether-dropdown {
+      &__control {
+        background-color: var(--highlight-background-color-tertiary);
+        height: 20px;
+        max-width: 120px;
+        min-width: 80px;
+
+        &--is-focused {
+          border: none;
+          box-shadow: none;
+        }
+      }
+
+      &__single-value {
+        color: var(--content-color-secondary);
+      }
+    }
+  }
+
+  .sidebar-list-item__icon-container {
+    justify-content: start;
+    margin-right: var(--spacing-zero);
+  }
+
+  .api-sidebar-list__item-empty-state {
+    // Adding a 36px padding to the container to align it with the API sidebar list item title above
+    padding: var(--spacing-s) 36px;
+  }
+}
+
+// API Sidebar is not virtualized. So any changes to the height
+// of the item will force the browser to re-layout the whole list
+// adding a fixed height and width to the list item
+// and containing the layout
+.api-sidebar-relations-loading-state {
+  contain: layout size;
+  width: 16px;
+  height: 20px;
+}
+
+.api-sidebar-relations-loading-indicator {
+  contain: layout size;
+  height: 20px;
+  width: 16px;
+}

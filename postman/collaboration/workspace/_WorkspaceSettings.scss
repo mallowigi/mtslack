@@ -1,0 +1,23 @@
+.ws-settings {
+  max-width: 440px;
+  margin-bottom: var(--spacing-xxl);
+  width: 100%;
+}
+
+.ws-back-to-overview-btn {
+  max-width: calc(3 * var(--spacing-xxl));
+  margin-top: var(--spacing-m);
+  padding-left: var(--spacing-zero);
+  justify-content: unset;
+}
+
+.ws-back-to-overview-btn:hover {
+  color: var(--content-color-link);
+  background-color: inherit;
+
+  svg {
+    path {
+      fill: var(--content-color-link);
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.release-info-context-view-wrapper {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+
+  .right-context-bar__title {
+    color: var(--content-color-primary);
+  }
+
+  .release-info-context-view {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    padding: var(--spacing-zero) var(--spacing-s);
+
+    &__version-header {
+      font-size: var(--text-size-m);
+      font-weight: var(--text-weight-medium);
+      line-height: var(--line-height-s);
+      color: var(--content-color-primary);
+      margin-top: var(--spacing-l);
+      margin-bottom: var(--spacing-l);
+    }
+
+    &__entity {
+      margin-bottom: var(--spacing-l);
+
+      &__label {
+        font-size: var(--text-size-m);
+        font-weight: var(--text-weight-medium);
+        line-height: var(--line-height-s);
+        color: var(--content-color-secondary);
+        margin-bottom: var(--spacing-xs);
+        margin-top: var(--spacing-xs);
+      }
+
+      &__content {
+        color: var(--content-color-primary);
+        font-size: var(--text-size-m);
+        line-height: var(--line-height-m);
+        display: flex;
+        flex: 1;
+        padding-right: var(--spacing-s);
+        align-items: center;
+        margin-top: var(--spacing-xs);
+
+        .btn {
+          background-color: transparent;
+        }
+
+        .btn-icon {
+          background-color: transparent;
+          width: var(--size-xs);
+          height: var(--size-xs);
+        }
+
+        .success-tick-icon {
+          cursor: default;
+          @include icon-color(var(--content-color-success));
+        }
+
+        &__id {
+          @include text-truncate-ellipsis;
+
+          &--entity {
+            background-color: var(--background-color-secondary);
+            border-radius: var(--border-radius-default);
+            padding: 6px var(--spacing-s) 6px var(--spacing-s);
+            margin-right: var(--spacing-s);
+            @include text-truncate-ellipsis;
+          }
+        }
+      }
+    }
+  }
+
+  .release-info-editors__editor {
+    display: inline-flex;
+    margin-top: var(--spacing-s);
+    align-items: center;
+
+    &--name {
+      margin-left: var(--spacing-s);
+    }
+  }
+}

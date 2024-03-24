@@ -1,0 +1,7 @@
+// Temporal solution to be removed when FilterSelect supports dimension configurations (https://postmanlabs.atlassian.net/browse/AETHER-1745)
+.private_network_bulk_add-collections-table-filter-select__popover {
+  .aether-filter-select-dropdown__control,
+  .aether-filter-select-dropdown__menu {
+    width: 200px;
+  }
+}

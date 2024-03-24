@@ -1,0 +1,156 @@
+.api-source-control {
+  height: 100%;
+  margin: var(--spacing-zero) var(--spacing-l) var(--spacing-zero) var(--spacing-s);
+
+  &__subHeader {
+    margin-bottom: var(--spacing-s);
+
+    &__button {
+      width: 42px;
+    }
+
+    &__counter {
+      font-size: var(--text-size-m);
+      font-weight: var(--text-weight-regular);
+      font-family: var(--text-family-default);
+      word-break: normal;
+    }
+
+    &__createPullRequest {
+      &__disabled-link,
+      &__disabled-link:hover {
+        text-decoration: unset !important;
+        color: var(--content-color-tertiary) !important;
+        cursor: not-allowed !important;
+      }
+    }
+  }
+
+  &__changesInPostman {
+    max-height: 200px;
+    min-height: 30px;
+
+    &__title:hover {
+      cursor: pointer;
+    }
+
+    &__filesList {
+      max-height: 150px;
+      overflow-y: auto;
+    }
+
+    &__aetherBadge {
+      margin: var(--spacing-zero);
+    }
+  }
+
+  &__commitChanges {
+    padding-top: var(--spacing-l);
+    border-top: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+
+    &__textArea {
+      margin-bottom: var(--spacing-m);
+    }
+
+    &__textInput {
+      margin-left: 21px;
+    }
+
+    &__radioOption {
+      > div:first-child {
+        width: 100%;
+      }
+
+      label {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        width: 95%;
+      }
+    }
+  }
+
+  &__commitsList {
+    min-height: 30px;
+    margin-bottom: var(--spacing-xxxl);
+
+    &__title:hover {
+      cursor: pointer;
+    }
+
+    &__list {
+      overflow-y: auto;
+      margin-bottom: var(--spacing-xxxl);
+      margin-left: var(--spacing-xl);
+
+      &__listItem-title {
+        &:hover {
+          cursor: pointer;
+        }
+      }
+
+      &__listItem-unPushed {
+        background-color: var(--highlight-background-color-tertiary);
+        padding: 2px;
+        border-radius: var(--border-radius-default);
+      }
+
+      &__listItem-commit {
+        margin-left: var(--spacing-xs);
+      }
+    }
+  }
+}
+
+.api-source-control__context-bar-icon--unread {
+  &:after {
+    content: '';
+    background-color: var(--base-color-brand);
+    position: absolute;
+    border-radius: 999px;
+    top: -1px;
+    right: -1px;
+    height: 6px;
+    width: 6px;
+  }
+}
+
+.api-source-control__on-prem-state {
+  margin: auto;
+}
+
+.api-source-control__sections {
+  min-height: 100px;
+  max-height: 100%;
+}
+
+.api-source-control__changesInPostman__title-collapse-button {
+  padding: 2px;
+  height: auto;
+}
+
+.api-source-control__changesInPostman__fileEntry__action {
+  display: none;
+}
+
+.api-source-control__changesInPostman__fileEntry:hover {
+  .api-source-control__changesInPostman__fileEntry__action {
+    display: initial;
+  }
+}
+
+.api-diff-view-name-label__breadcrumb-link {
+  min-width: 0;
+}
+
+.api-diff-view-name-label__breadcrumb-link:hover {
+  .api-diff-view-name-label__breadcrumb-link-child {
+    color: var(--content-color-link);
+    text-decoration: underline;
+  }
+
+  .api-diff-view-name-label__breadcrumb-link-child--icon svg path {
+    fill: var(--content-color-link);
+  }
+}

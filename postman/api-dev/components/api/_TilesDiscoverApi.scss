@@ -1,0 +1,51 @@
+.discover-api {
+  .publish-api-modal {
+    &__content {
+      .version-label {
+        margin-top: var(--spacing-s);
+        margin-bottom: var(--spacing-l);
+      }
+
+      .version-notes {
+        margin-bottom: var(--spacing-l);
+      }
+
+      .publish-elements {
+        margin-bottom: var(--spacing-xxl);
+      }
+
+      .api-discoverable {
+        margin-bottom: var(--spacing-l);
+      }
+    }
+  }
+}
+
+.published-versions {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: var(--spacing-s);
+  min-width: 0;
+
+  &:hover span {
+    color: var(--content-color-link);
+    text-decoration: underline;
+  }
+}
+
+.view-as-consumer {
+  @include clickable;
+}
+
+.switch-to-producer {
+  @include clickable;
+}
+
+.versions__branch_name {
+  flex-shrink: 1;
+}
+
+.versions__branch_time {
+  flex-shrink: 0;
+}

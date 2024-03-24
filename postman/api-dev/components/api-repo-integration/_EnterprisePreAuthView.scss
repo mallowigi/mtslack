@@ -1,0 +1,77 @@
+$content-width: 480px;
+.api-repo-enterprise-config {
+  width: $content-width;
+
+  &__header {
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &__panel__description {
+    padding-left: var(--spacing-xs);
+  }
+
+  &__input-wrapper {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &__banner {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &-access-token {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &-url {
+    margin-bottom: var(--spacing-l);
+  }
+
+  &__domain-input {
+    margin-top: var(--spacing-s);
+  }
+
+  &__token-input {
+    margin-top: var(--spacing-s);
+  }
+
+  &__actions {
+    display: flex;
+
+    &__primary {
+      padding-right: var(--spacing-s);
+    }
+
+    &__secondary {
+      margin-left: var(--spacing-s);
+    }
+  }
+
+  &__on-prem {
+    &__actions {
+      margin-left: auto;
+    }
+  }
+
+  &__connect-repo {
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &__buttons {
+      margin-top: var(--spacing-l);
+      margin-left: auto;
+    }
+
+    &__domain {
+      margin-left: var(--spacing-s);
+    }
+  }
+}
+
+.api-repo-enterprise-domain-selection {
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  word-break: break-word;
+}

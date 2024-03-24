@@ -1,0 +1,84 @@
+.release-test-tab-container {
+  .release-test-tab-heading {
+    margin: var(--spacing-l);
+    color: var(--content-color-primary);
+  }
+
+  .release-test-tab {
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-zero) var(--spacing-xl);
+
+    .release-test-tab-header {
+      color: var(--content-color-secondary);
+      height: var(--size-m);
+      padding: var(--spacing-s);
+    }
+
+    .release-test-tab-body {
+      border-top: var(--border-width-default) solid var(--border-color-default);
+
+      .release-test-tab-body-row {
+        .test-tab-row-icon {
+          margin-right: var(--spacing-xs);
+        }
+
+        .test-tab-row-text {
+          margin-bottom: 2px;
+          color: var(--content-color-primary);
+
+          &__error {
+            color: var(--content-color-error);
+            margin-bottom: 2px;
+
+            &__retry-link {
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        background-color: var(--background-color-primary);
+        height: 44px;
+        display: flex;
+        box-sizing: border-box;
+        align-items: center;
+        padding: var(--spacing-m) var(--spacing-s);
+        border-bottom: var(--border-width-default) solid var(--border-color-default);
+        font-size: var(--text-size-m);
+
+        .relation-cell {
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .release-test-tab-body-row:hover {
+        background-color: var(--background-color-secondary);
+      }
+    }
+
+    .release-test-tab-body:first-child {
+      border-top: var(--border-width-default) solid var(--border-color-default);
+    }
+  }
+}
+
+.empty-test-state-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__heading {
+    margin: var(--spacing-l) var(--spacing-zero) var(--spacing-s);
+  }
+
+  &__components {
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-l) var(--spacing-zero) var(--spacing-s);
+  }
+}

@@ -1,0 +1,25 @@
+.create-ws-outer-container {
+  height: 100vh;
+  overflow-y: scroll;
+
+  .create-ws-container {
+    margin: var(--spacing-zero) auto;
+    max-width: 480px;
+
+    .create-workspace-info-banner {
+      a {
+        color: var(--content-color-link);
+      }
+    }
+
+    .visibility-radio-loader {
+      border-radius: 50%;
+    }
+  }
+}
+
+.create-workspace-info-banner {
+  a {
+    color: var(--content-color-link);
+  }
+}

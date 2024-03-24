@@ -1,0 +1,64 @@
+.api-description-description {
+  margin-top: var(--spacing-l);
+  cursor: default;
+}
+
+.api-description-label {
+  margin-bottom: var(--spacing-s);
+}
+
+.api-description-md {
+  font-size: var(--text-size-m);
+  line-height: var(--line-height-m);
+  color: var(--content-color-primary);
+  word-break: break-word;
+  width: 100%;
+  overflow: auto;
+}
+
+.api-description-md p {
+  margin: var(--spacing-zero);
+}
+
+.api-description-md a {
+  color: var(--content-color-link);
+  text-decoration: none;
+}
+
+.api-description-edit-mode {
+  display: flex;
+  cursor: text;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.api-description-edit-mode-wrapper {
+  width: 100%;
+}
+
+.api-description-edit-icon {
+  margin-left: var(--spacing-l);
+  height: 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  visibility: hidden;
+}
+
+.api-description-edit-icon use {
+  fill: var(--content-color-secondary);
+}
+
+.api-description-edit-icon svg > path[fill] {
+  fill: var(--content-color-secondary);
+}
+
+.api-description-edit-mode:hover .api-description-edit-icon {
+  visibility: visible;
+}
+
+.api-description {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}

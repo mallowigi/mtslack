@@ -1,0 +1,70 @@
+.release-overview-tab {
+  align-self: center;
+  margin: var(--spacing-zero) auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    padding-left: 19px;
+    margin-bottom: var(--spacing-s);
+  }
+
+  &__notes {
+    padding-right: var(--spacing-l);
+    font-size: var(--text-size-m);
+    line-height: var(--line-height-m);
+
+    &-empty-state {
+      color: var(--content-color-secondary);
+    }
+
+    &-label {
+      margin-bottom: var(--spacing-s);
+    }
+
+    &-md {
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+      color: var(--content-color-primary);
+
+      & p {
+        margin: var(--spacing-zero);
+      }
+
+      & a {
+        color: var(--content-color-link);
+        text-decoration: none;
+      }
+    }
+
+    &-edit-mode {
+      display: flex;
+      cursor: text;
+      width: 100%;
+
+      &-wrapper {
+        width: 100%;
+      }
+    }
+
+    &-edit-icon {
+      margin-left: var(--spacing-l);
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      visibility: hidden;
+      @include icon-color(var(--content-color-secondary));
+    }
+
+    &-edit-mode:hover &-edit-icon {
+      visibility: visible;
+    }
+  }
+
+  &__summary {
+    .overview__meta-editor-summary-text {
+      padding-left: var(--spacing-s);
+    }
+  }
+}

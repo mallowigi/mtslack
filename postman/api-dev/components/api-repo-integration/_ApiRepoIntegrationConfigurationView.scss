@@ -1,0 +1,278 @@
+$content-width: 480px;
+.api-repo-integration-configuration {
+  &__header {
+    width: $content-width;
+    margin-bottom: var(--spacing-xl);
+  }
+
+  &__content {
+    width: $content-width;
+  }
+
+  &__branch-heading {
+    margin-bottom: var(--spacing-m);
+    margin-top: var(--spacing-m);
+  }
+
+  &__user-info {
+    margin-bottom: var(--spacing-l);
+    display: flex;
+    align-items: center;
+
+    &__title {
+      font-size: var(--text-size-m);
+      font-weight: var(--text-weight-bold);
+      line-height: var(--line-height-m);
+      color: var(--content-color-secondary);
+    }
+
+    &-details {
+      display: flex;
+      padding-top: var(--spacing-s);
+
+      &__username {
+        display: flex;
+        align-items: center;
+        font-size: var(--text-size-m);
+        color: var(--content-color-primary);
+      }
+    }
+
+    .avatar {
+      padding-right: var(--spacing-s);
+    }
+  }
+
+  &__user-info,
+  &__select-api,
+  &__select-version,
+  &__select-repo,
+  &__select-org,
+  &__select-branch-develop,
+  &__select-branch-main,
+  &__select-schema-directory,
+  &__select-collection-directory,
+  &__folderPath__selection,
+  &__repo-custom-input,
+  &__schema-sync-banner {
+    &__title {
+      display: block;
+      font-size: var(--text-size-m);
+      font-weight: var(--text-weight-bold);
+      line-height: var(--line-height-s);
+      color: var(--content-color-secondary);
+
+      &__label {
+        display: block;
+        margin-bottom: 10px; // To override the Flex component alignment and achieve the horizontal alignment in design.
+      }
+    }
+
+    &__description {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    &__dropdown-container {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      &__dropdown {
+        width: 100%;
+        margin-top: var(--spacing-xs);
+        background-color: var(--background-color-primary);
+        border: var(--border-width-default) var(--border-style-solid) var(--flow-input-border-color); // Using --flow token as Aether hasn’t exposed form inputs border color
+        border-radius: var(--border-radius-default);
+
+        &__button {
+          width: 100%;
+          justify-content: space-between;
+        }
+      }
+
+      &__input {
+        // Using !important to override the default style of Input
+        // component used inside APIRepositoryIntegrationEntitySelectDropdown
+        // component, as it styles the as text semi-bold, but we
+        // want that to be regular text
+        font-weight: var(--text-weight-regular) !important;
+      }
+
+      &__loading-indicator {
+        background-color: var(--background-color-secondary);
+        position: absolute;
+        right: var(--spacing-s);
+        top: calc(-1 * var(--spacing-xl));
+      }
+    }
+
+    &__value {
+      margin-left: var(--spacing-s);
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+      color: var(--content-color-primary);
+      display: inline-flex;
+    }
+
+    &__error {
+      display: flex;
+      height: var(--spacing-l);
+      color: var(--content-color-error);
+      font-size: var(--text-size-m);
+      margin-top: var(--spacing-xs);
+
+      &__message {
+        padding-left: var(--spacing-xs);
+      }
+
+      &__icon {
+        margin-top: 2px;
+      }
+
+      &__alt {
+        margin-top: var(--spacing-xs);
+      }
+    }
+
+    &__inputContainer {
+      margin: var(--spacing-s) var(--spacing-zero);
+    }
+  }
+
+  &__select-schema-directory,
+  &__select-collection-directory {
+    &__title {
+      margin-bottom: var(--spacing-xs);
+    }
+
+    &__dropdown-container {
+      margin-top: calc(var(--spacing-xs) / 2);
+    }
+  }
+
+  &__dropdown-previous-level-trigger {
+    @include text-truncate-ellipsis;
+  }
+
+  &__dropdown-item-label {
+    $dropdown-width: 478px;
+    $margin-total: 32px;
+    $right-arrow-width: 32px;
+    display: flex;
+    width: $dropdown-width - $right-arrow-width - $margin-total;
+
+    &__name {
+      @include text-truncate-ellipsis;
+    }
+  }
+
+  &__dropdown-selected-item-label {
+    @include text-truncate-ellipsis;
+    font-weight: var(--text-weight-regular);
+  }
+
+  &__dropdown-item-icon {
+    margin-right: var(--spacing-xs);
+  }
+
+  .action-button {
+    display: flex;
+    width: $content-width;
+    margin-top: var(--spacing-l);
+
+    &__configure {
+      width: 140px;
+      margin-right: var(--spacing-l);
+    }
+  }
+
+  &__non-enterprise__buttons {
+    margin-top: var(--spacing-l);
+  }
+}
+
+.api-repo-integration-configuration__select-version__menu {
+  width: 478px;
+
+  &-item {
+    @include text-truncate-ellipsis;
+  }
+}
+
+.api-repo-integration-configuration__select-branch-develop__dropdown-container__menu {
+  .dropdown-menu {
+    padding-bottom: var(--spacing-zero);
+  }
+
+  &__create-branch-menuitem {
+    position: sticky;
+    bottom: var(--spacing-zero);
+    background-color: var(--background-color-primary);
+    padding-bottom: var(--spacing-s);
+    border-bottom-left-radius: var(--border-radius-default);
+    border-bottom-right-radius: var(--border-radius-default);
+
+    hr {
+      margin-right: var(--spacing-zero);
+      margin-left: var(--spacing-zero);
+    }
+
+    span {
+      margin-left: var(--spacing-xs);
+    }
+  }
+}
+
+.reauth-menu-container {
+  display: flex;
+  flex-direction: column;
+
+  .reauth-menu {
+    padding: var(--spacing-zero) var(--spacing-s);
+    display: flex;
+    align-items: baseline;
+    font-size: var(--text-size-s);
+  }
+}
+
+.api-repo-integration-configuration__select-branch-develop__dropdown-container {
+  &__dropdown__alt {
+    .api-repo-integration-configuration__select-branch-develop__error__message {
+      margin-top: var(--spacing-zero) !important;
+    }
+  }
+
+  &__menu__alt {
+    .dropdown-menu {
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .dropdown-menu-item {
+      margin-left: var(--spacing-s);
+      margin-right: var(--spacing-s);
+    }
+
+    .api-repo-integration-configuration__dropdown-item-wrapper {
+      width: 100%;
+    }
+  }
+}
+
+.api-repo-integration-configuration__select-api__title__label {
+  margin-bottom: var(--spacing-zero);
+}
+
+.create-branch-from-scratch-menu-item {
+  margin-bottom: var(--spacing-s);
+}
+
+.api-repo-integration-configuration__select-schema-directory__dropdown-container__loading-indicator,
+.api-repo-integration-configuration__select-collection-directory__dropdown-container__loading-indicator {
+  top: var(--spacing-m);
+}
+
+.search-highlighted-api-git {
+  color: var(--content-color-primary);
+  font-weight: var(--text-weight-medium);
+}

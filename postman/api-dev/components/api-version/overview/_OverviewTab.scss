@@ -1,0 +1,34 @@
+.overview-content {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-bottom: var(--spacing-xxl);
+
+  &__build {
+    max-width: 880px;
+    margin: 0 auto;
+  }
+
+  // default min-width is auto so resetting it to 0
+  .version-content {
+    min-width: var(--spacing-zero);
+    display: flex;
+    flex: 1 1 59%;
+    flex-direction: column;
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-zero) var(--spacing-l);
+
+    .publish-api {
+      margin: var(--spacing-l) var(--spacing-zero);
+      width: 300px;
+    }
+  }
+
+  .release-content {
+    min-width: var(--spacing-zero);
+    display: flex;
+    flex: 1 1 33%;
+    margin-top: var(--spacing-xxl);
+    padding: var(--spacing-zero) var(--spacing-l);
+  }
+}

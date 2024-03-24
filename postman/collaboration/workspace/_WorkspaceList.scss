@@ -1,0 +1,12 @@
+.workspace-list-container {
+  &__spinner {
+    display: flex;
+    justify-content: center;
+    margin: var(--spacing-l) var(--spacing-zero);
+  }
+
+  &__error-state {
+    margin-top: var(--spacing-xl);
+    max-width: 390px;
+  }
+}

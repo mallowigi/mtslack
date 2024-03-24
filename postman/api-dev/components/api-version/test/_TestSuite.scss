@@ -1,0 +1,20 @@
+// We needed to refactor the width of columns as now we have 5 columns in each table of Test tab
+// Used !important to increase the specificity over already defined flex value in _TableBody.scss
+.test-suite-name {
+  flex: 1 0 0 !important;
+  margin-left: var(--spacing-s);
+}
+
+.test-suite-last-run {
+  flex: 1 0 0 !important;
+  height: var(--size-xs);
+  flex-wrap: wrap;
+}
+
+.test-suite-validation {
+  flex: 1 0 0 !important;
+}
+
+.test-suite-last-updated {
+  flex: 1 0 0 !important;
+}

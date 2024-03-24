@@ -1,0 +1,78 @@
+.entity-last-run {
+  &__status {
+    display: flex;
+    margin-right: var(--spacing-s);
+    border-radius: 30px;
+    height: var(--size-xs);
+    padding: var(--spacing-zero) var(--spacing-s);
+    font-size: var(--text-size-s);
+    font-weight: var(--text-weight-medium);
+    line-height: var(--line-height-s);
+    text-align: center;
+
+    &.success {
+      background-color: var(--background-color-success);
+      color: var(--content-color-success);
+      // TODO: check why we need to make display as block for text-overflow property to work
+      &.shrinked {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    &.failed {
+      background-color: var(--background-color-error);
+      color: var(--content-color-error);
+      // TODO: check why we need to make display as block for text-overflow property to work
+      &.shrinked {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    &.notest {
+      background-color: var(--background-color-secondary);
+      color: var(--content-color-secondary);
+
+      &.shrinked {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+
+    &.error {
+      align-items: center;
+      background-color: var(--background-color-error);
+      color: var(--content-color-error);
+    }
+
+    &.no-test {
+      color: var(--content-color-secondary);
+      padding: unset;
+    }
+
+    &-icon {
+      margin-right: var(--spacing-xs);
+    }
+  }
+
+  &__report {
+    font-size: var(--text-size-s);
+    font-weight: var(--text-weight-regular);
+    line-height: var(--line-height-s);
+    color: var(--content-color-secondary);
+    padding: var(--spacing-zero);
+    @include hover {
+      color: var(--content-color-brand);
+    }
+  }
+}
+
+.entity-last-run__error {
+  color: var(--content-color-error);
+  cursor: pointer;
+  font-size: var(--text-size-m);
+}

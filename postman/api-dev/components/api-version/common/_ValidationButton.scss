@@ -1,0 +1,58 @@
+.documentation-validation__status {
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-default);
+  cursor: pointer;
+  background: transparent;
+
+  &.warning {
+    border-radius: 100px;
+    font-weight: var(--text-weight-medium);
+    background-color: var(--background-color-warning);
+  }
+
+  &.refresh {
+    border-radius: 100px;
+    background: var(--background-color-secondary);
+  }
+
+  &.success {
+    border-radius: 100px;
+    background-color: var(--background-color-success);
+  }
+
+  &.validating {
+    border-radius: 100px;
+    background: var(--background-color-secondary);
+
+    .loading-indicator-wrapper {
+      padding-left: var(--spacing-xs);
+      padding-right: var(--spacing-s);
+      transform: scale(0.7);
+    }
+
+    cursor: default;
+  }
+
+  &.validate {
+    .documentation-validation__status_text {
+      padding-left: unset;
+    }
+  }
+
+  &.is-validate-disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .documentation-validation__status_text {
+    margin-right: var(--spacing-m);
+    @include text-truncate-ellipsis;
+  }
+
+  .documentation-validation__status_icon {
+    margin-right: var(--spacing-s);
+    margin-left: var(--spacing-s);
+  }
+}

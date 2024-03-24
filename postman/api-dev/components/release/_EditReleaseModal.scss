@@ -1,0 +1,224 @@
+.update-release-modal {
+  max-height: 90vh;
+  overflow: visible;
+
+  .update-release-modal__container-header {
+    & > div:first-child {
+      padding-top: 14px;
+      padding-bottom: 14px;
+      padding-right: var(--spacing-zero);
+      padding-left: var(--spacing-l);
+    }
+  }
+
+  .update-release-modal__container {
+    margin-bottom: var(--spacing-zero);
+    overflow: visible;
+
+    .update-release-modal__content--loader {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+    }
+
+    .update-release-modal__content {
+      .update-release-modal__content__banner {
+        line-height: var(--line-height-m);
+        color: var(--content-color-secondary);
+        margin-bottom: var(--spacing-l);
+
+        .link-text {
+          color: var(--content-color-secondary);
+
+          .aether-link-text:hover {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .update-release-modal__content__name {
+        margin-bottom: var(--spacing-l);
+
+        .update-release-modal__content__name__label {
+          color: var(--content-color-secondary);
+          margin-bottom: var(--spacing-xs);
+          font-weight: var(--text-weight-bold);
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-s);
+        }
+      }
+
+      .update-release-modal__content__summary {
+        margin-bottom: var(--spacing-l);
+        margin-top: var(--spacing-xs);
+
+        .update-release-modal__content__summary__label {
+          color: var(--content-color-secondary);
+          margin-bottom: var(--spacing-xs);
+          font-weight: var(--text-weight-bold);
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-s);
+        }
+
+        .textarea {
+          height: 74px;
+          font-size: var(--text-size-m);
+        }
+      }
+
+      .update-release-modal__content__visibility {
+        display: flex;
+        align-items: center;
+        margin-bottom: var(--spacing-l);
+
+        .update-release-modal__content__visibility__checkbox {
+          height: 14px;
+          min-width: 14px;
+          margin-right: var(--spacing-s);
+        }
+
+        .is-selected {
+          background: var(--blue-60);
+        }
+
+        .update-release-modal__content__visibility__label {
+          @include clickable;
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-s);
+          user-select: none;
+        }
+
+        .update-release-modal__content__visibility__info {
+          margin-left: var(--spacing-s);
+        }
+      }
+
+      .update-release-modal__content__tag__dropdown {
+        display: flex;
+        margin-top: var(--spacing-xs);
+
+        .dropdown {
+          flex: 1;
+          min-width: 0;
+
+          .update-release-modal__content__tag__dropdown--button {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: calc(var(--spacing-m) / 2);
+            padding-bottom: calc(var(--spacing-m) / 2);
+            padding-left: var(--spacing-s);
+
+            .update-release-modal__content__tag__dropdown--value {
+              display: flex;
+
+              .tag-icon {
+                height: 12px;
+                width: 12px;
+                margin-right: var(--spacing-xs);
+              }
+
+              .tag-placeholder {
+                color: var(--content-color-tertiary);
+                font-weight: var(--text-weight-regular);
+                font-size: var(--text-size-m);
+              }
+            }
+          }
+        }
+      }
+
+      .update-release-modal__content__tag {
+        position: relative;
+
+        .update-release-modal__content__tag__error {
+          margin-top: var(--spacing-xs);
+          color: var(--highlight-background-color-error);
+          font-size: var(--text-size-m);
+
+          .link-text {
+            color: var(--highlight-background-color-error);
+            line-height: var(--line-height-s);
+
+            .aether-link-text {
+              border-bottom: none;
+            }
+          }
+        }
+
+        .update-release-modal__content__tag__label-text {
+          height: 40px;
+          font-size: var(--text-size-m);
+          line-height: var(--line-height-s);
+
+          .update-release-modal__content__tag--label {
+            font-weight: var(--text-weight-bold);
+            line-height: var(--line-height-m);
+            color: var(--content-color-secondary);
+          }
+
+          .update-release-modal__content__tag--text {
+            line-height: var(--line-height-m);
+            color: var(--content-color-secondary);
+            font-size: var(--text-size-s);
+          }
+        }
+
+        .update-release-modal__content__tag__dropdown {
+          display: flex;
+          margin-top: var(--spacing-s);
+
+          .dropdown {
+            flex: 1;
+            min-width: 0;
+
+            .update-release-modal__content__tag__dropdown--button {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              padding-top: calc(var(--spacing-m) / 2);
+              padding-bottom: calc(var(--spacing-m) / 2);
+              padding-left: var(--spacing-s);
+              font-weight: var(--text-weight-regular);
+              font-size: var(--text-size-m);
+              color: var(--content-color-primary);
+
+              .update-release-modal__content__tag__dropdown--value {
+                display: flex;
+
+                .tag-icon {
+                  height: 12px;
+                  width: 12px;
+                  margin-right: var(--spacing-xs);
+                }
+
+                .tag-placeholder {
+                  color: var(--content-color-tertiary);
+                  font-weight: var(--text-weight-regular);
+                  font-size: var(--text-size-m);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .update-release-modal__footer {
+    padding-top: var(--spacing-l);
+    flex-basis: 72px;
+    justify-content: flex-end;
+
+    .update-release-modal__footer__add-button {
+      margin-left: var(--spacing-s);
+    }
+  }
+}
+
+.update-release-modal__content__tag__dropdown__check-icon {
+  height: var(--size-xs);
+  width: var(--size-xs);
+  margin-right: var(--spacing-s);
+}

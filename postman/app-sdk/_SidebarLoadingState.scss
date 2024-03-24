@@ -1,0 +1,86 @@
+.sidebar-loading-state {
+  height: 100%;
+  border-right: 1px solid var(--border-color-default);
+  border-left: 1px solid var(--border-color-default);
+  overflow: hidden;
+  animation: fade 1s ease-in-out infinite;
+
+  .sidebar-loading-state--item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-s) 0;
+    margin-left: var(--spacing-s);
+
+    .sidebar-loading-state__icon {
+      height: 8px;
+      width: 8px;
+      background-color: var(--highlight-background-color-secondary);
+      margin-left: var(--spacing-s);
+      border-radius: var(--border-radius-s);
+      margin-right: var(--spacing-m);
+      visibility: hidden;
+
+      &.has {
+        visibility: visible;
+      }
+    }
+
+    .sidebar-loading-state-indentation {
+      height: var(--size-s);
+      border-right: 1px solid var(--border-color-default);
+      width: 0;
+      margin: 0 var(--spacing-s);
+    }
+
+    .sidebar-loading-state__pre-info {
+      height: 8px;
+      width: var(--size-s);
+      background-color: var(--highlight-background-color-secondary);
+      margin-left: var(--spacing-xs);
+      border-radius: var(--border-radius-s);
+      margin-right: var(--spacing-m);
+    }
+
+    .sidebar-loading-state__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100px;
+      height: 8px;
+      background-color: var(--highlight-background-color-secondary);
+      border-radius: var(--border-radius-s);
+    }
+  }
+
+  .sidebar-loading-state--nested-item {
+    display: flex;
+    align-items: center;
+    margin-left: var(--spacing-s);
+
+    .sidebar-loading-state-indentation {
+      height: var(--size-s);
+      border-right: 1px solid var(--border-color-default);
+      width: 0;
+      margin: 0 var(--spacing-s);
+    }
+
+    .sidebar-loading-state__pre-info {
+      height: 8px;
+      width: var(--size-s);
+      background-color: var(--highlight-background-color-secondary);
+      margin-left: var(--spacing-xs);
+      border-radius: var(--border-radius-s);
+      margin-right: var(--spacing-m);
+    }
+
+    .sidebar-loading-state__info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100px;
+      height: 8px;
+      background-color: var(--highlight-background-color-secondary);
+      border-radius: var(--border-radius-s);
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.delete-api-container-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &__alert {
+    margin-top: var(--spacing-l);
+    background-color: var(--background-color-error);
+    border-radius: var(--border-radius-default);
+    display: flex;
+    flex-direction: row;
+
+    &__icon {
+      padding: var(--spacing-m) var(--spacing-zero) var(--spacing-m) var(--spacing-m);
+      @include icon-color(var(--content-color-error));
+      display: flex;
+      align-items: center;
+    }
+
+    &__text {
+      padding: var(--spacing-m);
+      color: var(--content-color-error);
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+    }
+  }
+}

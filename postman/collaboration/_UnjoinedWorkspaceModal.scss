@@ -1,0 +1,54 @@
+.unjoined-workspace-modal {
+  display: flex;
+  flex-direction: column;
+
+  &__loading {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__content {
+    margin: 28px 40px 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__header {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+
+    &-close-btn-wrapper {
+      height: 16px;
+      width: 16px;
+    }
+
+    &-close-btn-wrapper:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__title {
+    margin-top: 16px;
+    font-size: 16px;
+    font-weight: var(--text-weight-medium);
+    color: var(--content-color-primary);
+  }
+
+  &__description {
+    margin-top: 8px;
+    line-height: 20px;
+  }
+
+  &__join-btn {
+    margin-top: 24px;
+  }
+
+  &__image {
+    @include icon('../assets/images/empty-state/workspaces-join-artemis.svg', 160px, 160px);
+  }
+}

@@ -1,0 +1,12 @@
+.entity-empty__description {
+  color: var(--content-color-secondary);
+  font-size: var(--text-size-m);
+  font-family: var(--text-family-default);
+  padding: var(--spacing-zero) 36px;
+  line-height: var(--line-height-s);
+
+  .entity-learn-more-link {
+    padding: var(--spacing-zero) var(--spacing-xs);
+    font-size: var(--text-size-s);
+  }
+}

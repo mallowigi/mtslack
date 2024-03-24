@@ -1,0 +1,100 @@
+.field-segment {
+  &__container {
+    margin: var(--spacing-s) 0;
+  }
+
+  &__label {
+    &-title {
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+      font-weight: var(--text-weight-medium);
+
+      span {
+        color: var(--content-color-secondary);
+        font-size: var(--text-size-s);
+        font-weight: var(--text-weight-regular);
+      }
+    }
+
+    &-description {
+      margin-top: 0;
+      color: var(--content-color-secondary);
+      font-style: normal;
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+    }
+
+    &-input {
+      flex: 1;
+      padding: var(--spacing-s) var(--spacing-zero);
+    }
+  }
+
+  &__error {
+    font-size: var(--text-size-m);
+    color: var(--content-color-error);
+    margin-top: var(--spacing-s);
+
+    &__btn {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+
+.subtotal-label {
+  &__total-label-wrapper {
+    display: flex;
+
+    .info-button {
+      padding-left: var(--spacing-xs);
+      padding-top: 2px;
+    }
+  }
+
+  &__total-label {
+    color: var(--content-color-primary);
+    font-size: var(--text-size-m);
+    font-weight: var(--text-weight-medium);
+    padding-bottom: var(--spacing-xs);
+  }
+}
+
+.empty-state {
+  &__body {
+    font-size: var(--text-size-m);
+    color: var(--content-color-secondary);
+    margin: 0 0 var(--spacing-xl) 0;
+  }
+
+  &__action {
+    background: transparent;
+  }
+
+  &__illustration-wrapper {
+    margin-bottom: var(--spacing-xl);
+  }
+}
+
+.plan-interval-options {
+  &__tabs {
+    margin-top: var(--spacing-s);
+    margin-bottom: var(--spacing-m);
+    background-color: var(--background-color-tertiary);
+    height: 46px;
+  }
+
+  &__tab {
+    padding: 22px var(--spacing-l);
+    width: 121px;
+    border: 1px solid var(--background-color-tertiary);
+    justify-content: center;
+    @include active {
+      background-color: var(--background-color-primary);
+    }
+  }
+}
+
+.stripe-payment-element {
+  padding: var(--spacing-l) var(--spacing-l) var(--spacing-l) var(--spacing-zero) !important;
+}

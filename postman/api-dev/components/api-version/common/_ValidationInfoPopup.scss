@@ -1,0 +1,29 @@
+.validation-info {
+  width: auto;
+
+  .tooltip-wrapper {
+    padding: var(--spacing-l);
+  }
+}
+
+.validation-info__description {
+  line-height: 20px;
+  color: var(--content-color-primary);
+}
+
+.validation-info__actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: var(--spacing-l);
+
+  .validation-info__action_secondary {
+    flex: 0 0 40%;
+    font-weight: var(--text-weight-medium);
+  }
+
+  .validation-info__action_primary {
+    flex: 0 0 57%;
+    margin-left: var(--spacing-s);
+    font-weight: var(--text-weight-medium);
+  }
+}

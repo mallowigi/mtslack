@@ -1,0 +1,9 @@
+.api-dev-remove-from-workspace-modal__actions {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.api-dev-remove-from-workspace-modal__action-remove {
+  background-color: var(--base-color-error);
+  margin-left: var(--spacing-s);
+}

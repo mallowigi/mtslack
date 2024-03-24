@@ -1,0 +1,60 @@
+.entity-validation__status {
+  font-size: var(--text-size-s);
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius-default);
+  padding: var(--spacing-xs) var(--spacing-s);
+  cursor: pointer;
+  background: var(--background-color-tertiary);
+  height: var(--size-xs);
+  @include text-truncate-ellipsis;
+
+  &.warning {
+    font-weight: var(--text-weight-medium);
+    background-color: var(--background-color-warning);
+    border-radius: 100px;
+  }
+
+  &.error {
+    border-radius: 100px;
+  }
+
+  &.refresh {
+    border-radius: 100px;
+  }
+
+  // to-do: Replace with design tokens
+  &.success {
+    background-color: var(--background-color-success);
+    border-radius: 100px;
+    font-weight: var(--text-weight-medium);
+  }
+
+  &.validating {
+    background: var(--background-color-secondary);
+
+    .loading-indicator-wrapper {
+      padding-left: var(--spacing-xs);
+      padding-right: var(--spacing-s);
+      transform: scale(0.7);
+    }
+
+    cursor: default;
+  }
+
+  &.validate {
+    .entity-validation__status_text {
+      padding-left: unset;
+    }
+  }
+
+  &.is-validate-disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  .entity-validation__status_text {
+    padding-left: var(--spacing-xs);
+    @include text-truncate-ellipsis;
+  }
+}

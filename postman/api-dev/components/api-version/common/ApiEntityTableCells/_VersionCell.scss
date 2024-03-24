@@ -1,0 +1,37 @@
+.entity-version__label {
+  height: var(--size-xs);
+  padding: var(--spacing-zero) var(--spacing-s);
+  margin-right: var(--spacing-xs);
+  border-radius: 30px;
+  font-size: var(--text-size-s);
+  font-weight: var(--text-weight-medium);
+  background-color: var(--background-color-tertiary);
+  color: var(--content-color-tertiary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: pre;
+}
+
+.entity-version__current-label {
+  border: 1px solid var(--border-color-default);
+  background-color: var(--background-color-primary);
+  color: var(--content-color-tertiary);
+}
+
+.entity-version__icon {
+  cursor: pointer;
+
+  .info__icon {
+    @include icon-color(var(--content-color-tertiary));
+  }
+}
+
+.entity-version__markdown {
+  @include markdown();
+
+  p {
+    margin: 0;
+  }
+
+  line-height: 20px;
+}

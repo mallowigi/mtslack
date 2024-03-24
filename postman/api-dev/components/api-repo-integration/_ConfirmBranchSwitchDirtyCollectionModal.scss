@@ -1,0 +1,43 @@
+.switch-branch-dirty-collection-modal {
+  display: flex;
+  max-height: 70vh;
+
+  .modal-content {
+    padding: var(--spacing-l) var(--spacing-xl) var(--spacing-zero) var(--spacing-xl);
+  }
+
+  .switch-branch-dirty-collection-modal__content {
+    margin-bottom: var(--spacing-l);
+
+    &__label {
+      font-weight: var(--text-weight-medium);
+    }
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      font-size: var(--text-size-l);
+      line-height: var(--line-height-l);
+      margin-bottom: var(--spacing-m);
+    }
+  }
+
+  .switch-branch-dirty-collection-modal__footer {
+    .switch-branch-dirty-collection-modal__footer__buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      .switch-branch-dirty-collection-modal__footer__cancel-button {
+        margin-left: var(--spacing-m);
+      }
+
+      .switch-branch-dirty-collection-modal__footer__button {
+        height: var(--size-m);
+      }
+    }
+  }
+
+  .modal-footer {
+    padding: var(--spacing-zero);
+  }
+}

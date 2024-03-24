@@ -1,0 +1,70 @@
+.relation-overview-body {
+  display: flex;
+  padding: var(--spacing-s);
+  align-items: center;
+
+  &--empty {
+    padding: var(--spacing-l) var(--spacing-s);
+  }
+
+  .relation-overview-info {
+    // Text takes 90% of available width and truncates accordingly
+    min-width: var(--spacing-zero);
+    // default min-width is auto so resetting it to 0
+    width: 90%;
+    margin-top: var(--spacing-xs);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  .api-dev-table-row__delete {
+    visibility: hidden;
+    opacity: 0;
+    transition:
+      visibility 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
+  }
+
+  @include hover {
+    .api-dev-table-row__delete {
+      visibility: visible;
+      opacity: 1;
+    }
+    &.show-background-color {
+      background-color: var(--background-color-secondary);
+    }
+  }
+
+  .entity-validation__status {
+    display: none;
+
+    &__active {
+      display: inline-flex;
+    }
+  }
+
+  @include hover {
+    .entity-validation__status {
+      display: inline-flex;
+    }
+  }
+
+  .relation-overview-name {
+    display: flex;
+    justify-content: unset;
+    padding: unset;
+    height: 20px;
+
+    .relation-icon {
+      display: flex;
+      margin-right: var(--spacing-s);
+    }
+  }
+
+  .relation-overview__meta-info {
+    margin-left: var(--spacing-xl);
+  }
+
+  .relation-overview-widget {
+    margin-left: var(--spacing-xxl);
+  }
+}

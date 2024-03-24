@@ -1,0 +1,41 @@
+.manage-postman-keys-container {
+  .api-keys-container {
+    .api-keys-listing-container {
+      position: relative;
+    }
+
+    .pmak-status-group {
+      > label {
+        padding-top: var(--spacing-s);
+      }
+    }
+
+    .api-keys-listing-table {
+      table {
+        tr:hover {
+          .key-action-section {
+            visibility: visible;
+
+            .aether-button__left-icon,
+            span {
+              visibility: visible;
+            }
+          }
+        }
+
+        [role='cell'] {
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+
+  .settings-container {
+    margin-top: var(--spacing-s);
+
+    .definite-expiry-dropdown {
+      position: absolute;
+      left: 92px;
+    }
+  }
+}

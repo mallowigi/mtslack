@@ -1,0 +1,14 @@
+.release__header {
+  .release__header__gitTag {
+    margin-left: var(--spacing-s);
+    display: flex;
+    line-height: var(--line-height-s);
+    align-items: center;
+
+    &__text {
+      color: var(--content-color-secondary);
+      font-size: var(--text-size-l);
+      margin-left: var(--spacing-xs);
+    }
+  }
+}

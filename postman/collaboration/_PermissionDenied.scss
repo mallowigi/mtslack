@@ -1,0 +1,28 @@
+$empty-states-path: '../../assets/images/empty-state/' !default;
+$permission-denied-icon: $empty-states-path + 'no-permission.svg';
+.permission-denied {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--content-color-primary);
+  padding: 10px 10px 20px;
+  box-sizing: border-box;
+
+  .permission-denied--img {
+    @include icon($permission-denied-icon, 120px, 120px);
+    margin-bottom: 16px;
+  }
+
+  .permission-denied--title {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .permission-denied--title,
+  .permission-denied--subtitle {
+    font-size: 12px;
+    text-align: center;
+    @include unselectable;
+  }
+}

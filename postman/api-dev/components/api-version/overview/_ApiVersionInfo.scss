@@ -1,0 +1,33 @@
+.version-summary {
+  margin-top: var(--spacing-l);
+
+  .overview__meta-editor-summary {
+    padding: unset;
+  }
+}
+
+.overview__meta-editor-description {
+  margin-left: unset;
+
+  .description-preview--editable {
+    padding: var(--spacing-s) var(--spacing-s);
+  }
+
+  .overview__description__preview {
+    padding: var(--spacing-zero);
+  }
+}
+
+.version-schema-info {
+  display: flex;
+  margin-right: unset;
+
+  .view-schema-text {
+    font-size: var(--text-size-m);
+    margin-right: var(--spacing-zero);
+  }
+
+  .view-schema-icon {
+    color: var(--content-color-link);
+  }
+}

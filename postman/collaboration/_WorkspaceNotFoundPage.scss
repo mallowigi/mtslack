@@ -1,0 +1,31 @@
+.workspace-not-found {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+
+  &__img {
+    @include icon('../assets/images/empty-state/empty-state-cooper.svg', 160px, 160px);
+  }
+
+  &__title {
+    color: var(--content-color-primary);
+    margin-top: var(--spacing-l);
+    margin-bottom: var(--spacing-m);
+    font-size: var(--text-size-l);
+    font-weight: var(--text-weight-medium);
+  }
+
+  &__description {
+    color: var(--content-color-secondary);
+    font-size: var(--text-size-m);
+    margin-bottom: var(--spacing-xs);
+  }
+
+  &__view-workspaces-btn {
+    margin: var(--spacing-l) 0;
+    height: var(--controls-size-default);
+    font-size: var(--text-size-m);
+    font-weight: var(--text-weight-medium);
+  }
+}

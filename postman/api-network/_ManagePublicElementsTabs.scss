@@ -1,0 +1,81 @@
+.manage-public {
+  .tab {
+    &-links {
+      &-header {
+        margin-top: var(--spacing-m);
+        display: inline-block;
+
+        &__subtitle {
+          max-width: 70ch;
+          padding-top: var(--spacing-s);
+        }
+
+        &__link {
+          text-decoration: underline;
+          @include hover {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+
+      &-title {
+        padding-top: var(--spacing-xl);
+      }
+
+      &-banner {
+        margin-top: var(--spacing-xl);
+
+        &__content {
+          div {
+            align-items: center;
+          }
+        }
+      }
+
+      &-toggle {
+        display: inline-block;
+      }
+
+      &-search {
+        margin-top: var(--spacing-l);
+        margin-bottom: var(--spacing-l);
+        padding-right: var(--spacing-l);
+        width: 280px;
+      }
+
+      &-activity-bar {
+        background-color: var(--background-color-secondary);
+        height: 48px;
+        margin-top: var(--spacing-l);
+        padding-left: var(--spacing-s);
+        padding-right: var(--spacing-s);
+      }
+    }
+
+    &-workspace {
+      &-header {
+        margin-bottom: var(--spacing-l);
+        margin-top: var(--spacing-m);
+        display: inline-block;
+      }
+
+      &-search {
+        width: 288px;
+        height: var(--size-m);
+        margin-bottom: var(--spacing-l);
+      }
+    }
+
+    &-documentation {
+      &-filter {
+        padding-top: var(--spacing-l);
+        padding-bottom: var(--spacing-xl);
+      }
+
+      &-title {
+        padding-top: var(--spacing-xl);
+      }
+    }
+  }
+}

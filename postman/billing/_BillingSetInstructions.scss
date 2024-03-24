@@ -1,0 +1,60 @@
+$container-max-width: 520px;
+.set-instructions {
+  max-width: $container-max-width;
+  width: 100%;
+  margin: var(--spacing-zero) auto;
+
+  &__error,
+  &__loader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h1 {
+    margin-top: var(--spacing-xxl);
+  }
+
+  &__current-plan {
+    margin-top: var(--spacing-xl);
+    margin-bottom: var(--spacing-l);
+  }
+
+  &__current-plan-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-s);
+  }
+
+  &__next-cycle-instructions {
+    margin-top: var(--spacing-xl);
+  }
+
+  &__current-instructions-banner {
+    margin-top: var(--spacing-l);
+  }
+
+  &__dropdown {
+    margin-top: var(--spacing-l);
+  }
+
+  &__future-instructions-banner {
+    margin-top: var(--spacing-l);
+  }
+
+  &__action-buttons {
+    display: flex;
+  }
+
+  &__action-confirm {
+    min-width: 175px;
+    margin-top: var(--spacing-l);
+  }
+
+  &__action-cancel {
+    margin-left: var(--spacing-s);
+    margin-top: var(--spacing-l);
+  }
+}

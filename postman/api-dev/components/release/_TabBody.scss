@@ -1,0 +1,43 @@
+$container-width-eight-cols-narrow: 616px;
+.version-tab-body {
+  overflow-y: auto;
+
+  .accordion {
+    border-top: 0;
+  }
+
+  .version-tab-body__default {
+    margin: var(--spacing-xl) auto var(--spacing-xxxl);
+    max-width: $container-width-eight-cols-narrow;
+    padding-left: var(--spacing-xl);
+    padding-right: var(--spacing-xl);
+
+    &__pane {
+      width: 100%;
+    }
+
+    &__tile-heading {
+      margin-left: var(--spacing-m);
+    }
+
+    &__tile-body {
+      margin-top: var(--spacing-s);
+    }
+
+    &__generate-collection-button {
+      margin-left: auto;
+    }
+  }
+
+  .version-tab-body__screen {
+    margin-top: var(--spacing-m);
+
+    &__back-btn {
+      margin-left: var(--spacing-m);
+    }
+  }
+
+  .is-hidden {
+    display: none;
+  }
+}

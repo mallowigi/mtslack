@@ -1,0 +1,11 @@
+.mock-overview-header__icon {
+  height: var(--size-m);
+  width: var(--size-m);
+  @include hover {
+    background-color: var(--highlight-background-color-primary);
+  }
+}
+
+.mock-overview-widgets {
+  display: flex;
+}

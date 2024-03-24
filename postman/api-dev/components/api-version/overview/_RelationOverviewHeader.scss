@@ -1,0 +1,22 @@
+.relation-overview-header {
+  margin-top: var(--spacing-xxl);
+  display: flex;
+  border-bottom: var(--border-width-default) solid var(--border-color-default);
+  padding-bottom: var(--spacing-xs);
+
+  .header-text {
+    display: flex;
+    align-items: center;
+
+    &.network-mode {
+      flex-direction: column;
+      align-items: flex-start;
+      padding-bottom: var(--spacing-l);
+    }
+  }
+
+  .header-dropdown {
+    display: flex;
+    margin-left: auto;
+  }
+}

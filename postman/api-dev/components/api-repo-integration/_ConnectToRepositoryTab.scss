@@ -1,0 +1,87 @@
+$icon-github-logo: $empty-state-path + 'github_logo.png';
+$icon-bitbucket-logo: $empty-state-path + 'bitbucket_logo.png';
+$icon-gitlab-logo: $empty-state-path + 'gitlab.png';
+$icon-azure-logo: $empty-state-path + 'azure.png';
+.connect-repo-tab {
+  overflow: auto;
+  padding: var(--spacing-xxl);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+
+  .api-repository-connecting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+
+    &__illustration_wrapper {
+      background-color: var(--grey-00);
+      width: 60px;
+      height: 60px;
+      border-radius: var(--border-radius-default);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--spacing-m);
+    }
+
+    &__illustration__github {
+      @include icon($icon-github-logo, 56px, 56px);
+    }
+
+    &__illustration__bitbucket {
+      @include icon($icon-bitbucket-logo, 56px, 56px);
+    }
+
+    &__illustration__gitlab {
+      @include icon($icon-gitlab-logo, 56px, 56px);
+    }
+
+    &__illustration__azure {
+      @include icon($icon-azure-logo, 56px, 56px);
+    }
+
+    &__text-primary {
+      margin-bottom: var(--spacing-l);
+      font-size: var(--text-size-xxl);
+      font-weight: var(--text-weight-bold);
+      line-height: var(--line-height-xxl);
+      color: var(--content-color-primary);
+    }
+
+    &__text-secondary {
+      font-size: var(--text-size-l);
+      color: var(--content-color-secondary);
+      margin-bottom: var(--spacing-xl);
+    }
+
+    &__cancel-btn {
+      background-color: var(--background-color-tertiary);
+    }
+
+    &__cancel-btn:hover {
+      background-color: var(--highlight-background-color-tertiary);
+    }
+  }
+
+  .app-crash-wrapper {
+    .app-crash-header {
+      font-size: var(--text-size-l);
+      margin-bottom: var(--spacing-xs);
+    }
+
+    .app-crash-content {
+      font-size: var(--text-size-m);
+      font-weight: var(--text-weight-regular);
+      color: var(--content-color-secondary);
+      margin-top: var(--spacing-xs);
+    }
+
+    .btn {
+      color: var(--blue-60);
+    }
+  }
+}

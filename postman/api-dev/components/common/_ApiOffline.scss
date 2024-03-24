@@ -1,0 +1,38 @@
+.api-offline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &.sidebar {
+    padding: var(--spacing-xxl) var(--spacing-l);
+    margin-top: var(--spacing-xxl);
+  }
+
+  &.api-editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.context-bar {
+    padding: var(--spacing-xl) var(--spacing-zero);
+    margin-top: var(--spacing-xxxl);
+  }
+
+  &__blank-state {
+    padding: var(--spacing-l);
+  }
+
+  &__content {
+    text-align: center;
+
+    &__header {
+      margin-bottom: var(--spacing-s);
+    }
+
+    &__sub-header {
+      margin-bottom: var(--spacing-l);
+    }
+  }
+}

@@ -1,0 +1,29 @@
+$button-size: var(--size-s);
+.copy-link-btn {
+  background-color: transparent !important; // To take Specificity over its parent's properties
+  @include clickable;
+
+  &__default {
+    @include icon-color(var(--content-color-secondary));
+  }
+
+  &__success {
+    @include icon-color(var(--content-color-success));
+  }
+
+  &__hover {
+    @include icon-color(var(--content-color-primary));
+  }
+
+  &__active {
+    width: $button-size;
+    height: $button-size;
+    visibility: visible !important; //using this to take Specificity over its parent's hover
+    display: inline-flex !important;
+    background-color: transparent !important;
+  }
+
+  &-popover {
+    max-width: 320px !important; // We can remove this once aether provides maxWidth prop for Popover
+  }
+}

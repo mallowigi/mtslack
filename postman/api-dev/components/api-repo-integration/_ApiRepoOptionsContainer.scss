@@ -1,0 +1,82 @@
+$icon-github-logo: $empty-state-path + 'github_logo.png';
+$icon-bitbucket-logo: $empty-state-path + 'bitbucket_logo.png';
+$icon-gitlab-logo: $empty-state-path + 'gitlab.png';
+$icon-azure-logo: $empty-state-path + 'azure.png';
+.api-repository-connect {
+  font-weight: var(--text-weight-ragular);
+  margin: 0;
+
+  &.btn:hover {
+    background-color: var(--highlight-background-color-tertiary);
+  }
+
+  &.btn {
+    background-color: var(--background-color-tertiary);
+    margin-right: var(--spacing-s);
+  }
+
+  &-dropdown {
+    padding-right: var(--spacing-s);
+
+    .dropdown-menu {
+      width: 280px;
+      padding-top: var(--spacing-zero);
+
+      &-item {
+        margin-bottom: var(--spacing-xs);
+      }
+    }
+
+    &__learn-more {
+      padding: var(--spacing-l);
+    }
+
+    &__disabled {
+      cursor: not-allowed;
+    }
+  }
+
+  &__illustration-wrapper {
+    background-color: var(--grey-00);
+    margin-right: var(--spacing-xs);
+    border-radius: var(--border-radius-default);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+  }
+
+  &__illustration__github {
+    @include icon($icon-github-logo, 16px, 16px);
+  }
+
+  &__illustration__bitbucket {
+    @include icon($icon-bitbucket-logo, 16px, 16px);
+  }
+
+  &__illustration__bitbucketv3 {
+    @include icon($icon-bitbucket-logo, 16px, 16px);
+  }
+
+  &__illustration__gitlab {
+    @include icon($icon-gitlab-logo, 16px, 16px);
+  }
+
+  &__illustration__azure {
+    @include icon($icon-azure-logo, 16px, 16px);
+  }
+}
+
+.hoverable-tooltip-wrapper {
+  width: auto;
+  flex-grow: 1;
+}
+
+.connect-repository-button {
+  font-weight: var(--text-weight-regular);
+
+  .dropdown-caret {
+    margin-left: var(--spacing-xs);
+  }
+}

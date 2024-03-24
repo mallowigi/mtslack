@@ -1,0 +1,241 @@
+.api-editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: $font-primary;
+  font-size: var(--text-size-m);
+  padding: var(--spacing-s) var(--spacing-zero) var(--spacing-s) var(--spacing-s);
+  background-color: var(--background-color-primary);
+  border-bottom: var(--border-width-default) var(--border-style-solid) var(--border-color-default);
+
+  &__comments {
+    cursor: pointer;
+  }
+
+  .api-editor-header__left-section {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    color: var(--content-color-primary);
+    min-width: 0px;
+
+    .api-editor-header__back-button {
+      margin-right: var(--spacing-xs);
+    }
+
+    .api-name-label {
+      color: var(--content-color-primary);
+      display: flex;
+      align-items: center;
+      font-size: var(--text-size-l);
+      font-weight: var(--text-weight-medium);
+      min-width: 0px;
+      max-width: 100%;
+    }
+
+    .api-name-input {
+      overflow: hidden;
+      display: inline-block;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      padding-right: var(--spacing-xs);
+    }
+
+    .breadcrumb__text {
+      font-size: var(--text-size-l);
+    }
+
+    .edit-icon-rename {
+      display: none;
+      margin-right: var(--spacing-xs);
+      margin-left: var(--spacing-xs);
+      @include hover {
+        @include icon-color(var(--content-color-primary));
+      }
+    }
+
+    @include hover {
+      .edit-icon-rename {
+        display: inline-flex;
+        cursor: pointer;
+      }
+      .copy-link-icon {
+        visibility: visible;
+        cursor: pointer;
+      }
+    }
+
+    .copy-link-icon {
+      visibility: hidden;
+      margin-right: var(--spacing-xs);
+    }
+
+    .api-version-label {
+      color: var(--content-color-tertiary);
+      background-color: var(--background-color-tertiary);
+      padding: var(--spacing-zero) var(--spacing-s);
+      height: var(--size-xs);
+      font-size: var(--text-size-s);
+      font-weight: var(--text-weight-medium);
+      white-space: pre;
+      text-overflow: ellipsis;
+      min-width: 0px;
+      max-width: 100px;
+      border-radius: 30px;
+      cursor: auto;
+    }
+
+    .api-show-version {
+      font-weight: var(--text-weight-regular);
+      height: var(--size-s);
+      border-radius: unset;
+      color: var(--content-color-primary);
+      padding: unset;
+      margin-left: var(--spacing-s);
+      border-bottom: var(--border-width-default) var(--border-style-solid) var(--border-color-strong);
+      margin-right: var(--spacing-s);
+      white-space: nowrap;
+      cursor: pointer;
+      @include hover {
+        color: var(--content-color-link);
+      }
+    }
+  }
+
+  .api-editor-header__right-section {
+    display: flex;
+    align-items: center;
+    margin-left: var(--spacing-xxl);
+
+    .button-wrapper {
+      box-sizing: border-box;
+      height: var(--size-m);
+      display: flex;
+      align-items: stretch;
+      padding: var(--spacing-s);
+      margin-right: 2px;
+      cursor: pointer;
+      user-select: none;
+
+      .button-icon {
+        margin-right: var(--spacing-xs);
+      }
+
+      &.api-report-button,
+      &.api-share-button,
+      &.api-share-button {
+        background: initial;
+
+        &.button-disabled {
+          @include hover {
+            background: initial;
+          }
+        }
+
+        @include hover {
+          background-color: var(--highlight-background-color-primary);
+        }
+      }
+
+      .watch-label {
+        margin-left: var(--spacing-s);
+      }
+
+      .unwatch-icon {
+        @include icon-color(var(--content-color-secondary));
+      }
+
+      &.api-context-menu-button {
+        padding: var(--spacing-zero);
+        margin-right: var(--spacing-s);
+
+        .button-icon {
+          height: var(--size-m);
+          width: var(--size-m);
+
+          &.is-active {
+            background-color: var(--highlight-background-color-tertiary);
+          }
+        }
+      }
+    }
+
+    .api-watch-button {
+      margin-right: var(--spacing-s);
+    }
+
+    .api-mode-switcher {
+      margin-left: var(--spacing-xs);
+      margin-right: var(--spacing-l);
+
+      &.plugin__workspace-view-switcher__wrapper {
+        .plugin__workspace-view-switcher__wrapper {
+          display: flex;
+          justify-content: center;
+          height: var(--size-m);
+          width: 70px;
+
+          .plugin__workspace-view-switcher__switch {
+            height: 28px;
+            width: var(--size-m);
+
+            &.right {
+              left: 36px;
+            }
+          }
+
+          .plugin__workspace-view-active-item {
+            align-self: center;
+            display: flex;
+          }
+
+          .plugin__workspace-view-switcher__switch__item {
+            height: 100%;
+            flex: 0 0 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          &.disabled {
+            opacity: 0.3;
+          }
+        }
+      }
+
+      .api-mode-switcher__icon {
+        @include icon-color(var(--content-color-tertiary));
+
+        &.active {
+          @include icon-color(var(--base-color-brand));
+        }
+      }
+    }
+
+    .comments-ctx-toggler {
+      padding: var(--spacing-zero) var(--spacing-s);
+      font-size: var(--text-size-m);
+      align-items: center;
+      color: var(--content-color-brand);
+      margin-right: var(--spacing-m);
+
+      & > .comment-wrapper {
+        cursor: pointer;
+
+        &.disabled {
+          opacity: 0.4;
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+.api-context-menu-dropdown {
+  // to-do:  Add css according to the new dropdown design
+  .dropdown-menu {
+    margin-top: var(--spacing-zero);
+    margin-right: 3px;
+    width: 200px;
+  }
+}

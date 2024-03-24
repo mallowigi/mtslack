@@ -1,0 +1,21 @@
+.icon-tag {
+  &__type-card {
+    position: absolute;
+    top: 0;
+    right: var(--spacing-l);
+    height: var(--size-m);
+    width: var(--size-m);
+    border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
+
+    &.icon-tag__FEATURED {
+      background-color: var(--background-color-warning);
+    }
+
+    i {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}

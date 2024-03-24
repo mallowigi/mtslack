@@ -1,0 +1,26 @@
+.entity-name__icon {
+  display: flex;
+  margin-right: var(--spacing-s);
+}
+
+/**
+ * We needed to set min-width as 0 because of this issue -
+ * https://css-tricks.com/flexbox-truncated-text/
+ */
+.entity-name__link {
+  min-width: 0;
+}
+
+/**
+ * We needed to set display as block because of this issue -
+ * https://westerndevs.com/css/Using-Overflow-Ellipsis-in-Inline-Flex/
+ */
+.entity-name__label {
+  display: block;
+  font-size: var(--text-size-m);
+  padding: 2px var(--spacing-zero);
+  color: var(--content-color-primary);
+  @include text-truncate-ellipsis;
+  width: -webkit-fill-available;
+  margin-right: var(--spacing-s);
+}

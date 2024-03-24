@@ -1,0 +1,10 @@
+.notification-badge {
+  background-color: var(--base-color-brand);
+  position: absolute;
+  top: 3px;
+  right: 6px;
+  width: calc(var(--size-xs) / 2);
+  height: calc(var(--size-xs) / 2);
+  border-radius: var(--border-radius-max);
+  border: 3px var(--border-style-solid) var(--border-color-default);
+}

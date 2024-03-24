@@ -1,0 +1,37 @@
+.publish-api-modal {
+  &__content {
+    .version-label {
+      margin-top: var(--spacing-s);
+      margin-bottom: var(--spacing-l);
+    }
+
+    .version-notes {
+      margin-bottom: var(--spacing-l);
+    }
+
+    .publish-elements {
+      margin-bottom: var(--spacing-xxl);
+    }
+
+    .api-discoverable {
+      margin-bottom: var(--spacing-l);
+    }
+  }
+
+  .publish-api-checkbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    > span {
+      display: flex;
+      width: 100%;
+    }
+
+    > div {
+      > span {
+        color: var(--content-color-warning);
+      }
+    }
+  }
+}

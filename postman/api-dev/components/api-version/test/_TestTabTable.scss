@@ -1,0 +1,101 @@
+.test-tab-table {
+  .api-dev-table-header__cell {
+    color: var(--content-color-secondary) !important;
+  }
+
+  .row-hover__cell:last-child {
+    margin-left: unset !important;
+    flex: 0;
+    position: absolute;
+    right: 8px;
+  }
+
+  .api-dev-table-row__cell.shrinked {
+    margin-right: var(--spacing-zero) !important;
+  }
+
+  .arrow-column {
+    margin-right: var(--spacing-xxl);
+  }
+
+  .api-dev-table-body {
+    .row-parent {
+      display: flex;
+      min-height: 36px;
+      flex-direction: column;
+      justify-content: center;
+      border-bottom: var(--border-width-default) solid var(--border-color-default);
+
+      .row-hover {
+        padding: unset !important;
+        min-height: 36px;
+        box-sizing: border-box;
+      }
+
+      .api-dev-table-row {
+        color: var(--content-color-primary);
+        position: relative;
+
+        .row-arrow:hover {
+          background-color: var(--background-color-secondary);
+        }
+      }
+
+      .detailed-section {
+        width: 100%;
+        background: var(--background-color-secondary);
+        display: flex;
+        font-size: var(--text-size-m);
+
+        .empty-section {
+          width: 37.5%;
+          margin-left: var(--spacing-xl);
+        }
+
+        .filled-section {
+          margin: var(--spacing-xs) var(--spacing-zero);
+          margin-right: var(--spacing-m);
+          margin-left: var(--spacing-s);
+          font-size: inherit;
+          color: var(--content-color-secondary);
+          width: 75%;
+          box-sizing: border-box;
+
+          .detail-row {
+            min-height: var(--size-xs);
+            padding: var(--spacing-m) var(--spacing-zero);
+
+            .detail-row-header {
+              display: flex;
+              justify-content: space-between;
+              padding: var(--spacing-zero) var(--spacing-xs);
+
+              .view-report {
+                cursor: pointer;
+              }
+            }
+
+            ul {
+              list-style: none;
+              font-size: var(--text-size-s);
+              padding-left: var(--spacing-xl);
+            }
+
+            ul li::before {
+              content: '\2022';
+              color: var(--content-color-error);
+              font-weight: bold;
+              display: inline-block;
+              width: 1em;
+              margin-left: -1em;
+            }
+
+            li {
+              line-height: var(--line-height-m);
+            }
+          }
+        }
+      }
+    }
+  }
+}

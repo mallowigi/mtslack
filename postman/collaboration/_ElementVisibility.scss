@@ -1,0 +1,35 @@
+.element-visibility {
+  padding: var(--spacing-s) var(--spacing-m);
+  border: var(--border-width-default) solid var(--border-color-default);
+  border-radius: var(--border-radius-default);
+  margin-bottom: var(--spacing-xl);
+
+  &-entity {
+    display: flex;
+
+    &-name {
+      margin-left: var(--spacing-s);
+      color: var(--content-color-primary);
+      font-weight: var(--text-weight-medium);
+    }
+  }
+
+  &-role {
+    display: flex;
+    align-items: center;
+    margin-left: var(--spacing-xl);
+    margin-top: var(--spacing-xs);
+
+    &__helptext {
+      color: var(--content-color-secondary);
+    }
+
+    &__btn {
+      height: var(--size-s);
+      margin-left: var(--spacing-xs);
+      color: var(--content-color-secondary);
+      font-weight: var(--text-weight-medium);
+      @include icon-color(var(--content-color-secondary));
+    }
+  }
+}

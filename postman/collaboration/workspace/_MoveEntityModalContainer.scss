@@ -1,0 +1,20 @@
+.move-entity-modal-container {
+  &__modal-content {
+    min-height: 450px;
+
+    &__inner {
+      padding-top: var(--spacing-zero);
+    }
+
+    &__initial-error {
+      flex-grow: 1;
+      max-width: 390px;
+      margin-top: var(--spacing-xxl);
+    }
+  }
+
+  &__no-access {
+    flex-grow: 1;
+    margin-top: 56px;
+  }
+}

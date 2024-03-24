@@ -1,0 +1,131 @@
+.artemis-workspace-share-entity {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  align-items: center;
+
+  &__background {
+    @include icon('../assets/images/empty-state/share-entity.svg', 160px, 160px);
+  }
+
+  &__title {
+    color: var(--content-color-primary);
+    margin: 16px 0;
+    font-size: 16px;
+    font-weight: var(--text-weight-medium);
+  }
+
+  &__description {
+    color: var(--content-color-primary);
+    font-size: 14px;
+
+    &-entity-name,
+    &-workspace-name {
+      font-weight: var(--text-weight-medium);
+    }
+  }
+
+  &__share-btn {
+    margin: 16px 0 8px;
+    min-width: 262px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  &__workspace-action {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-actions {
+      display: flex;
+      margin-top: 8px;
+    }
+
+    &-text {
+      color: var(--content-color-primary);
+      font-size: 14px;
+      text-align: center;
+      line-height: 24px;
+    }
+  }
+
+  &__workspace-list {
+    display: flex;
+    height: 32px;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 12px;
+    padding-left: 4px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__workspace-list:hover {
+    cursor: pointer;
+    background-color: var(--highlight-background-color-primary);
+  }
+
+  &__workspace-name {
+    color: var(--content-color-primary);
+    font-size: 14px;
+    margin-left: 8px;
+    width: 100%;
+    @include text-truncate-ellipsis;
+  }
+
+  &__workspace {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__workspace-list.unjoined:hover {
+    cursor: default;
+  }
+
+  &__workspace.unjoined {
+    opacity: 0.5;
+  }
+
+  &__join-btn {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--content-color-brand);
+    padding: 0;
+  }
+
+  &__view-btn {
+    height: 32px;
+    margin-left: 8px;
+    min-width: 136px;
+  }
+
+  &__dropdown {
+    height: 32px;
+
+    &-menu {
+      width: 232px;
+      padding: 4px 0;
+
+      .dropdown-menu-item {
+        padding: 0;
+      }
+
+      .dropdown-menu-item.is-disabled {
+        opacity: 1;
+      }
+    }
+
+    &-btn {
+      .btn {
+        width: 232px;
+        height: 32px;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+  }
+}

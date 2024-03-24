@@ -1,0 +1,154 @@
+.invoices {
+  &__subheading {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-xl);
+    border-bottom: 1px solid var(--border-color-default);
+    color: var(--content-color-secondary);
+    font-size: var(--text-size-l);
+    max-width: none;
+  }
+
+  &__container {
+    .invoice-list {
+      &__list {
+        width: 100%;
+      }
+
+      &__list-heading {
+        font-size: var(--text-size-m);
+        color: var(--content-color-tertiary);
+        font-weight: var(--text-weight-medium);
+        margin-bottom: var(--spacing-l);
+      }
+
+      &__list-heading-item {
+        border-bottom: 1px solid var(--border-color-default);
+        padding: var(--spacing-s);
+        text-align: left;
+      }
+    }
+
+    .billing-information-widget {
+      font-size: var(--text-size-m);
+      line-height: var(--line-height-m);
+
+      &__address {
+        display: flex;
+      }
+
+      .label {
+        color: var(--content-color-secondary);
+      }
+    }
+  }
+
+  &__status-overdue {
+    margin-right: var(--spacing-l);
+    background: var(--background-color-error);
+    padding: 2px 12px;
+    font-weight: var(--text-weight-medium);
+    font-size: var(--text-size-s);
+    color: var(--content-color-error);
+    border-radius: 32px;
+    display: inline-block;
+  }
+
+  &__status-upcoming {
+    margin-right: var(--spacing-l);
+    background: var(--background-color-warning);
+    padding: 2px 12px;
+    font-weight: var(--text-weight-medium);
+    font-size: var(--text-size-s);
+    color: var(--content-color-warning);
+    border-radius: 32px;
+    display: inline-block;
+  }
+
+  &__status-paid {
+    background: var(--background-color-success);
+    padding: 2px 12px;
+    font-weight: var(--text-weight-medium);
+    font-size: var(--text-size-s);
+    color: var(--content-color-success);
+    border-radius: 32px;
+    display: inline-block;
+  }
+
+  &__history {
+    padding-bottom: var(--spacing-xxl);
+  }
+
+  &__history,
+  &__overdue {
+    &-heading {
+      padding-top: var(--spacing-xxl);
+      padding-bottom: var(--spacing-l);
+      display: none;
+      position: relative;
+      font-size: var(--text-size-xl);
+      font-weight: var(--text-weight-medium);
+      @media (min-width: $breakpoint-md) {
+        display: block;
+      }
+    }
+
+    &-list-row-item {
+      font-size: var(--text-size-m);
+      font-weight: var(--text-weight-regular);
+      padding: var(--spacing-m) var(--spacing-s);
+      border-bottom: 1px solid var(--border-color-default);
+      width: 15%;
+    }
+
+    &-list-row-item:last-child {
+      width: 38%;
+    }
+
+    &-list-row-item:nth-child(2) {
+      width: 32%;
+      max-width: 50px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &-retry-link {
+      display: inline-block;
+      font-weight: var(--text-weight-medium);
+      color: var(--content-color-secondary);
+      cursor: pointer;
+      margin-left: var(--spacing-s);
+    }
+
+    &-list-row-item:last-child {
+      position: relative;
+    }
+
+    &-download-link {
+      display: inline-block;
+      position: absolute;
+      right: var(--spacing-m);
+    }
+  }
+
+  &__upcoming {
+    font-size: var(--text-size-m);
+    margin-top: var(--spacing-s);
+
+    &-status {
+      margin-left: var(--spacing-l);
+      background: var(--background-color-warning);
+      padding: 2px 12px;
+      font-weight: var(--text-weight-medium);
+      font-size: var(--text-size-s);
+      color: var(--content-color-warning);
+      border-radius: 32px;
+    }
+
+    &-default-card {
+      font-size: var(--text-size-m);
+      color: var(--content-color-secondary);
+      margin-top: var(--spacing-xs);
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.inline-comment__update-badge {
+  display: flex;
+  background-color: var(--base-color-brand);
+  padding: 2px 8px;
+  border-radius: 35px;
+  color: var(--content-color-constant);
+  font-size: 11px;
+  @include clickable;
+
+  span {
+    margin-left: 4px;
+  }
+}
+
+.inline-comment__changes-badge-container {
+  display: flex;
+  justify-content: center;
+}
+
+.inline-comment__changes-badge {
+  display: inline-flex;
+  background-color: var(--base-color-brand);
+  padding: 3px 10px;
+  border-radius: 35px;
+  margin-bottom: 12px;
+  color: var(--content-color-constant);
+  font-size: 11px;
+  @include clickable;
+
+  .pm-icon {
+    width: 10px;
+    height: 10px;
+  }
+
+  span {
+    margin-left: 4px;
+  }
+}

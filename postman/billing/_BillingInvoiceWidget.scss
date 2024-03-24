@@ -1,0 +1,86 @@
+.invoice-widget {
+  &__upcoming {
+    display: flex;
+    justify-content: flex-start;
+    margin: var(--spacing-s) 0px;
+    align-items: center;
+
+    &-status {
+      margin-right: var(--spacing-l);
+      background: var(--background-color-warning);
+      padding: 2px 12px;
+      font-weight: var(--text-weight-medium);
+      font-size: var(--text-size-s);
+      color: var(--content-color-warning);
+      border-radius: 32px;
+    }
+
+    &-details {
+      font-size: var(--text-size-m);
+      color: var(--content-color-secondary);
+      margin-left: var(--spacing-s);
+    }
+  }
+
+  &__unpaid {
+    margin: var(--spacing-s) 0px;
+
+    &-invoice-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: var(--spacing-s);
+    }
+
+    &-status {
+      margin-right: var(--spacing-l);
+      background: var(--background-color-error);
+      padding: 2px 12px;
+      font-weight: var(--text-weight-medium);
+      font-size: var(--text-size-s);
+      color: var(--content-color-error);
+      border-radius: 32px;
+    }
+
+    &-details {
+      font-size: var(--text-size-m);
+      color: var(--content-color-secondary);
+      margin-left: var(--spacing-s);
+    }
+  }
+
+  &__paid {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: var(--spacing-s) 0px;
+
+    &-status {
+      margin-right: var(--spacing-l);
+      background: var(--background-color-success);
+      padding: 2px 12px;
+      font-weight: var(--text-weight-medium);
+      font-size: var(--text-size-s);
+      color: var(--content-color-success);
+      border-radius: 32px;
+    }
+
+    &-details {
+      font-size: var(--text-size-m);
+      color: var(--content-color-secondary);
+      margin-left: var(--spacing-s);
+    }
+  }
+
+  &__status {
+    display: flex;
+  }
+
+  &__invoice-link {
+    text-decoration: underline;
+    font-size: var(--text-size-m);
+    color: var(--content-color-tertiary);
+    margin-left: var(--spacing-l);
+    cursor: pointer;
+  }
+}

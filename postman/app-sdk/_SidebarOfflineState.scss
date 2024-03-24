@@ -1,0 +1,28 @@
+.sidebar-offline-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+  padding: var(--spacing-xxl) var(--spacing-l);
+
+  &__illustration {
+    height: 120px;
+    width: 140px;
+    margin-bottom: var(--spacing-l);
+  }
+
+  &__title {
+    margin-bottom: var(--spacing-s);
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+    display: flex;
+
+    span {
+      display: inline-block;
+    }
+  }
+}
