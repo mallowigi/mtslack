@@ -6,7 +6,7 @@
       <option name="HEX_COLOR_LONG_FORMAT" value="true" />
       <option name="KEEP_SINGLE_LINE_BLOCKS" value="true" />
     </CssCodeStyleSettings>
-    <H2CodeStyleSettings version="6">
+    <H2CodeStyleSettings version="7">
       <option name="USE_GENERAL_STYLE" value="false" />
     </H2CodeStyleSettings>
     <HTMLCodeStyleSettings>

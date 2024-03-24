@@ -10,7 +10,7 @@ const useSass = gulpSass(sass);
 
 const paths = {
   styles: {
-    src: 'styles/**/*.scss',
+    src: 'postman/**/*.scss',
     dest: 'dist',
   },
   scripts: {
